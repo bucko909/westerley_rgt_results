@@ -1,0 +1,106 @@
+pos,userurl,name,rgt_teamname,vr_teamname,time_secs,delta_secs,wkg
+1,/user/134948,Nick Greenhalghяʀ,яʀ,RASIO RACING,1151.2,0.0,4.09
+2,/user/79305,Carlos Cela,,,1151.4,0.186,4.06
+3,/user/32313,Alex Pleger [яʀ],яʀ,,1151.5,0.281,3.09
+4,/user/148716,Stuart  Hardy [brt],#BRT,,1151.5,0.284,3.76
+5,/user/129003,Andrzej Krajewski яʀ,яʀ,RASIO RACING,1151.5,0.287,3.66
+6,/user/143480,Mark Rowbottom яʀ,яʀ,RASIO RACING,1151.6,0.437,4.23
+7,/user/118750,Sam Kimber,,,1151.6,0.44,4.22
+8,/user/239729,John Bergensk-brt,#BRT,,1151.8,0.575,3.82
+9,/user/79121,James Melville,,GLASGOW UNITED CC,1151.8,0.575,3.65
+10,/user/141761,Alasdair Mcalpine,,GLASGOW UNITED CC,1151.8,0.621,5.04
+11,/user/87547,Nick Beale,,,1151.8,0.623,4.51
+12,/user/35315,Mike Lister,DIRT,TRANSATLANTIC RAIDERS,1151.8,0.63,3.9
+13,/user/67054,Johan Oelofse sanz,,TEAM SANZ,1151.8,0.652,4.19
+14,/user/61282,Daniel Neugebauer,Pedalers,PEDALERS,1151.9,0.687,3.95
+15,/user/171135,Tomasz (m) Poniatowski,MoonRiders,MOON RIDERS,1151.9,0.711,3.2
+16,/user/39166,Ned Bowen,,TRANSATLANTIC RAIDERS,1151.9,0.737,4.2
+17,/user/240834,Anders Borggaard,,,1151.9,0.742,4.06
+18,/user/177844,Tom  Moss ,SDW,SOUTHBOROUGH (SDW) BEES,1151.9,0.756,4.14
+19,/user/134803,Steve Mayes (m),,,1152.0,0.816,3.59
+20,/user/78811,Christophe Contant[pdl],Pedalers,,1152.0,0.828,4.94
+21,/user/160071,Wouter Claes,MoonRiders,MOON RIDERS,1152.0,0.832,3.68
+22,/user/21747,Matthew Feely,,,1152.1,0.896,3.77
+23,/user/132783,Mathias  Bergkvist,,,1152.1,0.901,3.88
+24,/user/36792,Francois Iker,,,1152.1,0.91,4.75
+25,/user/112364,Stefan Kruger sanz,,TEAM SANZ,1152.1,0.91,4.52
+26,/user/17957,Tom Gakes [drft],,,1152.1,0.935,3.56
+27,/user/197451,Chris (otr) Hopkinson(m),,,1152.2,0.986,4.11
+28,/user/56133,Peter Austin (bcc),,,1152.3,1.068,3.9
+29,/user/178580,Timo Achenbach,MoonRiders,MOON RIDERS,1153.9,2.759,4.45
+30,/user/103369,Kader Allouni,,TEAM POCOMOTION (BLIGHTY),1154.1,2.956,3.89
+31,/user/66009,Jurgen Janssens,Pedalers,PEDALERS,1154.2,2.984,4.04
+32,/user/95553,J. Sammut (a),,TEAM POCOMOTION (BLIGHTY),1154.2,3.056,3.63
+33,/user/192238,J. Pdq coach ,PDQ,,1155.2,4.03,4.05
+34,/user/171850,Eduardo Juez,,,1155.7,4.502,3.58
+35,/user/6305,Mike Ade,,,1229.6,78.424,3.21
+36,/user/228203,Thijmen Cornelissens,,,1229.8,78.60900000000001,3.65
+37,/user/65709,Ian stephens Sdw (0),SDW,,1230.1,78.898,3.05
+38,/user/175915,Kristen Ege,,TEAM POCOMOTION (VIKINGS),1230.3,79.134,3.48
+39,/user/162587,Pedro Reis,,,1230.6,79.4,4.69
+40,/user/168564,Marcus Garwood (o),,,1230.8,79.568,4.28
+41,/user/70138,Andrew Beale,,WESTERLEY TWO,1233.1,81.939,3.28
+42,/user/127225,Kenneth Vansina[pdl],Pedalers,PEDALERS,1238.7,87.531,3.95
+43,/user/48021,Magalhães  Daniel otr m,,,1238.9,87.73400000000001,3.95
+44,/user/193520,David Ellis (c) m,,,1262.0,110.85,3.13
+45,/user/235888,Rich Heath,,,1262.2,110.994,3.18
+46,/user/214154,Christian  Sheridan m,,,1262.3,111.075,3.28
+47,/user/226270,Glen Thurgood,,,1262.5,111.307,3.6
+48,/user/149819,Peter Kennedy (m),,TEAM CAMERON,1262.6,111.40299999999999,3.04
+49,/user/128814,Tim Cummins,,WESTERLEY TWO,1262.8,111.64099999999999,3.51
+50,/user/189298,Rob Miller (m),Ibex,,1262.9,111.669,3.77
+51,/user/53484,James Tobin,,,1263.4,112.233,3.82
+52,/user/78574,Stephen Bellio otr,,,1264.0,112.80199999999999,3.55
+53,/user/206831,Edgaras Spiridonov,KISS RT,,1283.9,132.706,4.27
+54,/user/183281,Chris Duffy bees,SDW,SOUTHBOROUGH (SDW) BEES,1298.1,146.868,3.29
+55,/user/96541,Carl Dickason,,,1298.3,147.133,3.18
+56,/user/86973,David wcc Buckley wcc,,WESTERLEY ONE,1298.3,147.151,2.99
+57,/user/241161,Weiran Shen,,,1298.8,147.635,3.24
+58,/user/194499,Kristof Keszthelyi-k,,,1300.1,148.909,3.35
+59,/user/221746,Tom Yates-ijaz,,,1300.3,149.086,3.56
+60,/user/65012,Dave Morrison,,WESTERLEY ONE,1304.6,153.45499999999998,3.37
+61,/user/175441,Tomas Nygren,,,1354.8,203.641,2.66
+62,/user/167006,Mike Murray,,,1355.6,204.403,3.48
+63,/user/200597,Asbjørn May,,,1355.7,204.52,3.44
+64,/user/170063,Marco Verhoogt,,,1357.1,205.924,3.61
+65,/user/101319,Martin Wilson,,,1368.3,217.143,3.16
+66,/user/141031,Kevan Unsworth (m),,TEAM CAMERON,1378.3,227.091,2.43
+67,/user/179576,Donald Grant sdw,SDW,SOUTHBOROUGH (SDW) SKEETERS,1380.0,228.788,2.62
+68,/user/240621,Pablo Vega,,,1380.8,229.591,3.65
+69,/user/239358,Iain Craik(o),,,1381.3,230.106,3.25
+70,/user/42929,Michael  Sendner ,,,1381.5,230.275,2.97
+71,/user/183664,Marcoid Marabu,,,1381.7,230.477,2.27
+72,/user/97222,Paulo Almeida,,,1381.7,230.552,3.85
+73,/user/91958,Gt Thakkar,,WESTERLEY THREE,1381.8,230.565,2.86
+74,/user/149081,Sam Doshi,,,1389.3,238.154,2.95
+75,/user/172007,Patrick Boumann,,,1390.1,238.89,2.83
+76,/user/235036,Vincent Delmas,,,1390.7,239.477,3.16
+77,/user/17597,Kristof Novi (o),,,1491.2,340.031,2.74
+78,/user/235135,Michael Creighton,,,1491.9,340.733,3.19
+79,/user/233673,Julien Ouazri,,,1625.7,474.514,2.16
+80,/user/207359,Becky Evans pdq(w),PDQ,,1625.9,474.746,2.5
+,/user/205085,Lucien Didot,FFZ,,,,
+,,Jimmi Lind,,,,,
+,/user/216411,Ant caerus Little,,,,,
+,,Malcolm Woolsey,,,,,
+,/user/240159,Julien Romiguieres,,,,,
+,,Simon-pierre Puech,,,,,
+,/user/131212,Alfred Worry,,,,,
+,,Vince Dey,,,,,
+,/user/74342,Nic Stevenson,,WESTERLEY ONE,,,
+,/user/69166,Ian Nguru,,WESTERLEY THREE,,,
+,/user/88613,Jerry Ball,,,,,
+,,Fred  Tebbenham,,,,,
+,/user/106173,Hendre Knoetze sanz,,TEAM SANZ,,,
+,/user/18064,Francisco Zapata,,,,,
+,/user/228324,Nic Lee,,WESTERLEY TWO,,,
+,/user/212551,Richard Pullan,,,,,
+,/user/190753,Karlie Hollingswort,,,,,
+,/user/210676,Richard Gillingham c,,,,,
+,/user/33451,Hsu Bobo,,,,,
+,/user/173992,Milan  Guzijan,,,,,
+,/user/133577,Will Salisbury,,,,,
+,,Jason Harmer,,,,,
+,/user/86836,Rob Bennett,,WESTERLEY THREE,,,
+,/user/8068,Me Bonkers,,,,,
+,/user/150787,Paul Hindson (c),,,,,
