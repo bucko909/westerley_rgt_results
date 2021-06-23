@@ -73,11 +73,11 @@ def update_events():
 def write_users(users, fname='out/user_results.csv'):
     csvfile = open(fname, 'w')
     csvwriter = csv.writer(csvfile)
-    csvwriter.writerow(['pos', 'url', 'name', 'points', 'best', 'race count'])
+    csvwriter.writerow(['pos', 'url', 'name', 'points', 'best', 'race count', 'win count', '2nd count', '3rd count'])
     users = list(users.items())
     users.sort(key=lambda u: u[1]['points'], reverse=True)
     for pos, u in enumerate(users, start=1):
-        csvwriter.writerow([pos, 'https://rgtdb.com' + u[0], u[1]['name'], u[1]['points'], u[1]['best'], u[1]['races']])
+        csvwriter.writerow([pos, 'https://rgtdb.com' + u[0], u[1]['name'], u[1]['points'], u[1]['best'], u[1]['races'], u[1]['golds'], u[1]['silvers'], u[1]['bronzes']])
 
 def write_teams(teams, fname='out/team_results.csv'):
     csvfile = open(fname, 'w')
@@ -140,10 +140,16 @@ def ingest_row(row, users):
     if pos:
         if userurl is None:
             raise Exception(lxml.html.tostring(result))
-        users.setdefault(userurl, {'name': username, 'points': 0, 'races': 0})
+        users.setdefault(userurl, {'name': username, 'points': 0, 'races': 0, 'golds': 0, 'silvers': 0, 'bronzes': 0})
         user = users[userurl]
         user.setdefault('best', pos)
         user['best'] = min(pos, user['best'])
+        if pos == 1:
+            user['golds'] += 1
+        elif pos == 2:
+            user['silvers'] += 1
+        elif pos == 3:
+            user['bronzes'] += 1
         user['points'] += max(1, 101 - pos)
         user['races'] += 1
 
