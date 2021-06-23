@@ -34,16 +34,16 @@ def update_events():
         os.mkdir('out')
     if not os.path.exists('cache'):
         os.mkdir('cache')
-    for i in get_events():
-        if os.path.exists(f'cache/{i}.html'):
-            html = open(f'cache/{i}.html','r').read()
+    for race_no, race_id in enumerate(get_events(), start=1):
+        if os.path.exists(f'cache/{race_id}.html'):
+            html = open(f'cache/{race_id}.html','r').read()
         else:
-            response = requests.get(f'https://rgtdb.com/events/{i}')
+            response = requests.get(f'https://rgtdb.com/events/{race_id}')
             if not response.ok:
                 import pdb; pdb.set_trace()
             html = response.text
-            open(f'cache/{i}.html', 'w').write(html)
-        csvfile = open(f'out/{i}.csv', 'w')
+            open(f'cache/{race_id}.html', 'w').write(html)
+        csvfile = open(f'out/{race_no:02n}_{race_id}.csv', 'w')
         csvwriter = csv.writer(csvfile)
         csvwriter.writerow(['pos', 'userurl', 'name', 'rgt_teamname', 'vr_teamname', 'time_secs', 'delta_secs', 'wkg'])
         team_results_dict = {}
@@ -57,15 +57,15 @@ def update_events():
         for team, team_results in team_results_dict.items():
             race_team_points.append((team, sum(101 - pos for pos in team_results[:2] if pos is not None)))
         race_team_points.sort(key=lambda x: x[1], reverse=True)
-        csvfile = open(f'out/{i}_teams.csv', 'w')
+        csvfile = open(f'out/{race_no:02n}_{race_id}_teams.csv', 'w')
         csvwriter = csv.writer(csvfile)
         csvwriter.writerow(['team_name', 'points'])
         for team, points in race_team_points:
             team_points.setdefault(team, 0)
             team_points[team] += points
             csvwriter.writerow([team, points])
-        write_users(users, f'out/{i}_users_cumulative.csv')
-        write_teams(team_points, f'out/{i}_teams_cumulative.csv')
+        write_users(users, f'out/{race_no:02n}_{race_id}_users_cumulative.csv')
+        write_teams(team_points, f'out/{race_no:02n}_{race_id}_teams_cumulative.csv')
 
     write_users(users)
     write_teams(team_points)
