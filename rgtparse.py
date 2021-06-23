@@ -73,7 +73,7 @@ def update_events():
 def write_users(users, fname='out/user_results.csv'):
     csvfile = open(fname, 'w')
     csvwriter = csv.writer(csvfile)
-    csvwriter.writerow(['pos', 'url', 'name', 'points', 'best'])
+    csvwriter.writerow(['pos', 'url', 'name', 'points', 'best', 'race count'])
     users = list(users.items())
     users.sort(key=lambda u: u[1]['points'], reverse=True)
     for pos, u in enumerate(users, start=1):
