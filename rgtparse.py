@@ -23,7 +23,7 @@ def get_teams():
     csvfile = open(f'data/teams.csv', 'r', newline='')
     csvreader = csv.reader(csvfile)
     for row in csvreader:
-        teams[row[0]] = row[1]
+        teams[row[0]] = {'name': row[1], 'after': int(row[2]) if row[2] else 1, 'before': int(row[3]) if row[3] else float('inf')}
     return teams
 
 def update_events():
@@ -46,13 +46,19 @@ def update_events():
         csvfile = open(f'out/{race_no:02n}_{race_id}.csv', 'w')
         csvwriter = csv.writer(csvfile)
         csvwriter.writerow(['pos', 'userurl', 'name', 'rgt_teamname', 'vr_teamname', 'team_qualifier', 'time_secs', 'delta_secs', 'wkg'])
-        team_results_dict = {}
-        for row in parse_event(html, teams):
+        for row in parse_event(html, teams, race_no):
             csvwriter.writerow(row)
             ingest_row(row, users, team_points)
             vr_teamname, team_qualifier = row[4:6]
-            if team_qualifier:
-                team_results_dict.setdefault(vr_teamname, []).append(row[0])
+        check_csv = csv.reader(open(f'data/team_after_{race_no}.csv', 'r'))
+        # Ugly team verification code.
+        #print(race_no)
+        #for team_name, pointss in check_csv:
+        #    points = int(pointss)
+        #    aliases = {'BRT': 'TEAM BTR', 'TEAM BRT': 'TEAM BTR'}
+        #    team_name = aliases.get(team_name, team_name)
+        #    if points != team_points.get(team_name):
+        #        print(team_name, points, team_points.get(team_name), team_points.get(team_name,0) - points)
         write_users(users, f'out/{race_no:02n}_{race_id}_users_cumulative.csv')
         write_teams(team_points, f'out/{race_no:02n}_{race_id}_teams_cumulative.csv')
 
@@ -77,7 +83,7 @@ def write_teams(teams, fname='out/team_results.csv'):
     for pos, t in enumerate(teams, start=1):
         csvwriter.writerow([pos, t[0], t[1]])
 
-def parse_event(html, teams):
+def parse_event(html, teams, race_no):
     data = lxml.etree.HTML(html)
     vr_team_runners = dict()
     for result in data.xpath('/html/body/div/main/div/div/div[@id="results"]/table/tbody/tr'):
@@ -122,8 +128,9 @@ def parse_event(html, teams):
             time = None
             delta = None
             wkg = None
-        vr_teamname = teams.get(userurl)
-        if vr_teamname:
+        vr_team = teams.get(userurl)
+        if vr_team is not None and vr_team['after'] <= race_no <= vr_team['before']:
+            vr_teamname = vr_team['name']
             vr_team_finishers = vr_team_runners.setdefault(vr_teamname, [])
             vr_team_finishers.append(userurl)
             if len(vr_team_finishers) <= 2:
@@ -131,6 +138,7 @@ def parse_event(html, teams):
             else:
                 team_qualifier = False
         else:
+            vr_teamname = None
             team_qualifier = None
         yield (pos, userurl, username, rgt_teamname, vr_teamname, team_qualifier, time, delta, wkg)
 
@@ -141,6 +149,9 @@ def ingest_row(row, users, team_points):
             raise Exception(lxml.html.tostring(result))
         users.setdefault(userurl, {'name': username, 'points': 0, 'team_points': 0, 'races': 0, 'golds': 0, 'silvers': 0, 'bronzes': 0, 'team': vr_teamname})
         user = users[userurl]
+        if user['team'] is None or vr_teamname is None:
+            # allow flips between None
+            user['team'] = vr_teamname
         assert vr_teamname == user['team'], (vr_teamname, user)
         user.setdefault('best', pos)
         user['best'] = min(pos, user['best'])

@@ -6,8 +6,8 @@ pos,url,name,points,team,team points,best,race count,win count,2nd count,3rd cou
 5,https://rgtdb.com/user/160071,Wouter Claes,260,MOON RIDERS,260,5,3,0,0,0
 6,https://rgtdb.com/user/79121,James Melville,258,GLASGOW UNITED CC,258,9,3,0,0,0
 7,https://rgtdb.com/user/79305,Carlos Cela,258,,0,2,3,0,1,0
-8,https://rgtdb.com/user/17957,Tom Gakes [drft],256,,0,9,3,0,0,0
-9,https://rgtdb.com/user/78811,Christophe Contant[pdl],253,,0,7,3,0,0,0
+8,https://rgtdb.com/user/17957,Tom Gakes [drft],256,TEAM BTR,89,9,3,0,0,0
+9,https://rgtdb.com/user/78811,Christophe Contant[pdl],253,PEDALERS,159,7,3,0,0,0
 10,https://rgtdb.com/user/35315,Mike Lister,246,TRANSATLANTIC RAIDERS,246,12,3,0,0,0
 11,https://rgtdb.com/user/129003,Andrzej Krajewski яʀ,244,RASIO RACING,96,5,3,0,0,0
 12,https://rgtdb.com/user/112364,Stefan Kruger sanz,243,TEAM SANZ,243,4,3,0,0,0
@@ -15,7 +15,7 @@ pos,url,name,points,team,team points,best,race count,win count,2nd count,3rd cou
 14,https://rgtdb.com/user/193520,David Ellis (c) m,238,,0,10,3,0,0,0
 15,https://rgtdb.com/user/61282,Daniel Neugebauer,238,PEDALERS,173,14,3,0,0,0
 16,https://rgtdb.com/user/134803,Steve Mayes (m),232,,0,19,3,0,0,0
-17,https://rgtdb.com/user/66009,Jurgen Janssens,223,PEDALERS,223,22,3,0,0,0
+17,https://rgtdb.com/user/66009,Jurgen Janssens,223,PEDALERS,79,22,3,0,0,0
 18,https://rgtdb.com/user/171850,Eduardo Juez,221,,0,19,3,0,0,0
 19,https://rgtdb.com/user/175915,Kristen Ege,219,TEAM POCOMOTION (VIKINGS),219,7,3,0,0,0
 20,https://rgtdb.com/user/95553,J. Sammut (a),215,TEAM POCOMOTION (BLIGHTY),215,8,3,0,0,0
@@ -36,12 +36,12 @@ pos,url,name,points,team,team points,best,race count,win count,2nd count,3rd cou
 35,https://rgtdb.com/user/162587,Pedro Reis,153,,0,39,3,0,0,0
 36,https://rgtdb.com/user/87547,Nick Beale,150,,0,11,2,0,0,0
 37,https://rgtdb.com/user/126796,Simon Miller sdw,149,SOUTHBOROUGH (SDW) BEES,149,21,2,0,0,0
-38,https://rgtdb.com/user/65709,Ian stephens Sdw (0),149,,0,37,3,0,0,0
+38,https://rgtdb.com/user/65709,Ian stephens Sdw (0),149,SOUTHBOROUGH (SDW) SKEETERS,149,37,3,0,0,0
 39,https://rgtdb.com/user/94990,Danie  Steyn sanz,148,TEAM SANZ,68,21,2,0,0,0
 40,https://rgtdb.com/user/175441,Tomas Nygren,147,,0,37,3,0,0,0
 41,https://rgtdb.com/user/197451,Chris (otr) Hopkinson(m),143,,0,27,2,0,0,0
 42,https://rgtdb.com/user/86973,David wcc Buckley wcc,137,WESTERLEY ONE,97,49,3,0,0,0
-43,https://rgtdb.com/user/148716,Stuart  Hardy [brt],132,,0,4,2,0,0,0
+43,https://rgtdb.com/user/148716,Stuart  Hardy [brt],132,TEAM BTR,132,4,2,0,0,0
 44,https://rgtdb.com/user/65012,Dave Morrison,123,WESTERLEY ONE,123,56,3,0,0,0
 45,https://rgtdb.com/user/141031,Kevan Unsworth (m),121,TEAM CAMERON,121,42,3,0,0,0
 46,https://rgtdb.com/user/189298,Rob Miller (m),119,,0,33,2,0,0,0
@@ -59,12 +59,12 @@ pos,url,name,points,team,team points,best,race count,win count,2nd count,3rd cou
 58,https://rgtdb.com/user/5419,C. Riemens,95,,0,6,1,0,0,0
 59,https://rgtdb.com/user/118750,Sam Kimber,94,,0,7,1,0,0,0
 60,https://rgtdb.com/user/199111,Niko Nikodemiak,93,,0,8,1,0,0,0
-61,https://rgtdb.com/user/239729,John Bergensk-brt,93,,0,8,1,0,0,0
+61,https://rgtdb.com/user/239729,John Bergensk-brt,93,TEAM BTR,93,8,1,0,0,0
 62,https://rgtdb.com/user/194499,Kristof Keszthelyi-k,92,,0,52,2,0,0,0
-63,https://rgtdb.com/user/241161,Weiran Shen,91,,0,54,2,0,0,0
+63,https://rgtdb.com/user/241161,Weiran Shen,91,WESTERLEY TWO,0,54,2,0,0,0
 64,https://rgtdb.com/user/78574,Stephen Bellio otr,90,,0,52,2,0,0,0
 65,https://rgtdb.com/user/172007,Patrick Boumann,89,,0,67,3,0,0,0
-66,https://rgtdb.com/user/149081,Sam Doshi,89,,0,58,3,0,0,0
+66,https://rgtdb.com/user/149081,Sam Doshi,89,WESTERLEY FOUR,89,58,3,0,0,0
 67,https://rgtdb.com/user/149169,Edu Harms [brt],88,,0,13,1,0,0,0
 68,https://rgtdb.com/user/109368,Jim Ogilvie otr,87,,0,14,1,0,0,0
 69,https://rgtdb.com/user/175692,James Osborn ,87,,0,14,1,0,0,0
@@ -99,7 +99,7 @@ pos,url,name,points,team,team points,best,race count,win count,2nd count,3rd cou
 98,https://rgtdb.com/user/210578,Ben Van der burg,46,,0,55,1,0,0,0
 99,https://rgtdb.com/user/120170,Laurent Gonon,45,,0,56,1,0,0,0
 100,https://rgtdb.com/user/234437,Ama Amra,44,,0,57,1,0,0,0
-101,https://rgtdb.com/user/221746,Tom Yates-ijaz,42,,0,59,1,0,0,0
+101,https://rgtdb.com/user/221746,Tom Yates-ijaz,42,WESTERLEY FOUR,42,59,1,0,0,0
 102,https://rgtdb.com/user/114609,Jorge  Roldán ,41,,0,60,1,0,0,0
 103,https://rgtdb.com/user/208041,Romain Choquet,40,,0,61,1,0,0,0
 104,https://rgtdb.com/user/69166,Ian Nguru,39,WESTERLEY THREE,39,62,1,0,0,0

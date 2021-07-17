@@ -2,11 +2,11 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,time_secs,delta_secs,wk
 1,/user/134948,Nick Greenhalghяʀ,яʀ,RASIO RACING,True,1151.2,0.0,4.09
 2,/user/79305,Carlos Cela,,,,1151.4,0.186,4.06
 3,/user/32313,Alex Pleger [яʀ],яʀ,,,1151.5,0.281,3.09
-4,/user/148716,Stuart  Hardy [brt],#BRT,,,1151.5,0.284,3.76
+4,/user/148716,Stuart  Hardy [brt],#BRT,TEAM BTR,True,1151.5,0.284,3.76
 5,/user/129003,Andrzej Krajewski яʀ,яʀ,RASIO RACING,True,1151.5,0.287,3.66
 6,/user/143480,Mark Rowbottom яʀ,яʀ,RASIO RACING,False,1151.6,0.437,4.23
 7,/user/118750,Sam Kimber,,,,1151.6,0.44,4.22
-8,/user/239729,John Bergensk-brt,#BRT,,,1151.8,0.575,3.82
+8,/user/239729,John Bergensk-brt,#BRT,TEAM BTR,True,1151.8,0.575,3.82
 9,/user/79121,James Melville,,GLASGOW UNITED CC,True,1151.8,0.575,3.65
 10,/user/141761,Alasdair Mcalpine,,GLASGOW UNITED CC,True,1151.8,0.621,5.04
 11,/user/87547,Nick Beale,,,,1151.8,0.623,4.51
@@ -18,24 +18,24 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,time_secs,delta_secs,wk
 17,/user/240834,Anders Borggaard,,,,1151.9,0.742,4.06
 18,/user/177844,Tom  Moss ,SDW,SOUTHBOROUGH (SDW) BEES,True,1151.9,0.756,4.14
 19,/user/134803,Steve Mayes (m),,,,1152.0,0.816,3.59
-20,/user/78811,Christophe Contant[pdl],Pedalers,,,1152.0,0.828,4.94
+20,/user/78811,Christophe Contant[pdl],Pedalers,PEDALERS,True,1152.0,0.828,4.94
 21,/user/160071,Wouter Claes,MoonRiders,MOON RIDERS,True,1152.0,0.832,3.68
 22,/user/21747,Matthew Feely,,,,1152.1,0.896,3.77
 23,/user/132783,Mathias  Bergkvist,,,,1152.1,0.901,3.88
 24,/user/36792,Francois Iker,,,,1152.1,0.91,4.75
 25,/user/112364,Stefan Kruger sanz,,TEAM SANZ,True,1152.1,0.91,4.52
-26,/user/17957,Tom Gakes [drft],,,,1152.1,0.935,3.56
+26,/user/17957,Tom Gakes [drft],,TEAM BTR,False,1152.1,0.935,3.56
 27,/user/197451,Chris (otr) Hopkinson(m),,,,1152.2,0.986,4.11
 28,/user/56133,Peter Austin (bcc),,,,1152.3,1.068,3.9
 29,/user/178580,Timo Achenbach,MoonRiders,MOON RIDERS,False,1153.9,2.759,4.45
 30,/user/103369,Kader Allouni,,TEAM POCOMOTION (BLIGHTY),True,1154.1,2.956,3.89
-31,/user/66009,Jurgen Janssens,Pedalers,PEDALERS,True,1154.2,2.984,4.04
+31,/user/66009,Jurgen Janssens,Pedalers,PEDALERS,False,1154.2,2.984,4.04
 32,/user/95553,J. Sammut (a),,TEAM POCOMOTION (BLIGHTY),True,1154.2,3.056,3.63
 33,/user/192238,J. Pdq coach ,PDQ,,,1155.2,4.03,4.05
 34,/user/171850,Eduardo Juez,,,,1155.7,4.502,3.58
 35,/user/6305,Mike Ade,,,,1229.6,78.424,3.21
 36,/user/228203,Thijmen Cornelissens,,,,1229.8,78.60900000000001,3.65
-37,/user/65709,Ian stephens Sdw (0),SDW,,,1230.1,78.898,3.05
+37,/user/65709,Ian stephens Sdw (0),SDW,SOUTHBOROUGH (SDW) SKEETERS,True,1230.1,78.898,3.05
 38,/user/175915,Kristen Ege,,TEAM POCOMOTION (VIKINGS),True,1230.3,79.134,3.48
 39,/user/162587,Pedro Reis,,,,1230.6,79.4,4.69
 40,/user/168564,Marcus Garwood (o),,,,1230.8,79.568,4.28
@@ -55,9 +55,9 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,time_secs,delta_secs,wk
 54,/user/183281,Chris Duffy bees,SDW,SOUTHBOROUGH (SDW) BEES,True,1298.1,146.868,3.29
 55,/user/96541,Carl Dickason,,,,1298.3,147.133,3.18
 56,/user/86973,David wcc Buckley wcc,,WESTERLEY ONE,True,1298.3,147.151,2.99
-57,/user/241161,Weiran Shen,,,,1298.8,147.635,3.24
+57,/user/241161,Weiran Shen,,WESTERLEY TWO,False,1298.8,147.635,3.24
 58,/user/194499,Kristof Keszthelyi-k,,,,1300.1,148.909,3.35
-59,/user/221746,Tom Yates-ijaz,,,,1300.3,149.086,3.56
+59,/user/221746,Tom Yates-ijaz,,WESTERLEY FOUR,True,1300.3,149.086,3.56
 60,/user/65012,Dave Morrison,,WESTERLEY ONE,True,1304.6,153.45499999999998,3.37
 61,/user/175441,Tomas Nygren,,,,1354.8,203.641,2.66
 62,/user/167006,Mike Murray,,,,1355.6,204.403,3.48
@@ -72,7 +72,7 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,time_secs,delta_secs,wk
 71,/user/183664,Marcoid Marabu,,,,1381.7,230.477,2.27
 72,/user/97222,Paulo Almeida,,,,1381.7,230.552,3.85
 73,/user/91958,Gt Thakkar,,WESTERLEY THREE,True,1381.8,230.565,2.86
-74,/user/149081,Sam Doshi,,,,1389.3,238.154,2.95
+74,/user/149081,Sam Doshi,,WESTERLEY FOUR,True,1389.3,238.154,2.95
 75,/user/172007,Patrick Boumann,,,,1390.1,238.89,2.83
 76,/user/235036,Vincent Delmas,,,,1390.7,239.477,3.16
 77,/user/17597,Kristof Novi (o),,,,1491.2,340.031,2.74

@@ -1,26 +1,26 @@
 pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,time_secs,delta_secs,wkg
-1,/user/17957,Tom Gakes [drft],,,,1351.4,0.0,3.24
-2,/user/131274,Jan Deca [яʀ],яʀ,,,1351.8,0.311,3.96
+1,/user/17957,Tom Gakes [drft],,TEAM BTR,True,1351.4,0.0,3.24
+2,/user/131274,Jan Deca [яʀ],яʀ,RASIO RACING,True,1351.8,0.311,3.96
 3,/user/35315,Mike Lister,DIRT,TRANSATLANTIC RAIDERS,True,1352.7,1.21,3.41
 4,/user/160071,Wouter Claes,MoonRiders,MOON RIDERS,True,1352.7,1.235,3.41
 5,/user/66009,Jurgen Janssens,Pedalers,PEDALERS,True,1352.7,1.267,4.09
 6,/user/39166,Ned Bowen,,TRANSATLANTIC RAIDERS,True,1352.8,1.322,3.18
 7,/user/134948,Nick Greenhalghяʀ,яʀ,RASIO RACING,True,1352.8,1.329,3.79
 8,/user/95553,J. Sammut,,TEAM POCOMOTION (BLIGHTY),True,1352.8,1.379,3.28
-9,/user/129003,Andrzej Krajewski яʀ,яʀ,RASIO RACING,True,1352.8,1.397,3.5
-10,/user/78811,Christophe Contant[pdl],Pedalers,,,1352.9,1.442,4.53
+9,/user/129003,Andrzej Krajewski яʀ,яʀ,RASIO RACING,False,1352.8,1.397,3.5
+10,/user/78811,Christophe Contant[pdl],Pedalers,PEDALERS,True,1352.9,1.442,4.53
 11,/user/141031,Kevan Unsworth (m),,TEAM CAMERON,True,1353.0,1.577,2.96
 12,/user/143480,Mark Rowbottom яʀ,яʀ,RASIO RACING,False,1353.0,1.588,3.77
 13,/user/155757,"Jan Linden, vd",,,,1353.1,1.626,3.69
 14,/user/132783,Mathias  Bergkvist,,,,1353.1,1.662,3.66
 15,/user/67054,Johan Oelofse sanz,,TEAM SANZ,True,1355.0,3.509,3.77
-16,/user/137497,Jørgen Vanbers[яʀ],яʀ,RASIO RACING,False,1355.0,3.582,3.66
+16,/user/137497,Jørgen Vanbers[яʀ],яʀ,,,1355.0,3.582,3.66
 17,/user/155734,F. R.,,,,1355.2,3.73,5.14
-18,/user/241161,Weiran Shen wcc,,,,1355.3,3.858,3.24
+18,/user/241161,Weiran Shen wcc,,WESTERLEY TWO,True,1355.3,3.858,3.24
 19,/user/228324,Nic Lee,,WESTERLEY TWO,True,1359.3,7.86,3.79
 20,/user/79305,Carlos Cela,,,,1362.8,11.347,4.15
 21,/user/141761,Alasdair Mcalpine,,GLASGOW UNITED CC,True,1366.3,14.868,4.14
-22,/user/61282,Daniel Neugebauer,Pedalers,PEDALERS,True,1368.0,16.601,3.84
+22,/user/61282,Daniel Neugebauer,Pedalers,PEDALERS,False,1368.0,16.601,3.84
 23,/user/232488,Scott  Crichton ,,,,1371.2,19.784,3.32
 24,/user/106173,Hendre Knoetze sanz,,TEAM SANZ,True,1372.6,21.167,3.91
 25,/user/88613,Jerry Ball,,WESTERLEY THREE,True,1372.7,21.248,3.13
@@ -34,10 +34,10 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,time_secs,delta_secs,wk
 33,/user/86836,Rob Bennett,,WESTERLEY THREE,True,1391.3,39.873,3.62
 34,/user/178580,Timo Achenbach,MoonRiders,MOON RIDERS,True,1392.6,41.18,4.16
 35,/user/175441,Tomas Nygren,,,,1415.8,64.375,2.61
-36,/user/70138,Andrew Beale,,WESTERLEY TWO,True,1470.0,118.553,2.91
+36,/user/70138,Andrew Beale,,WESTERLEY TWO,False,1470.0,118.553,2.91
 37,/user/179576,Donald Grant sdw,SDW,SOUTHBOROUGH (SDW) SKEETERS,True,1543.3,191.811,2.52
 38,/user/65012,Dave Morrison,,WESTERLEY ONE,True,1565.8,214.336,3.0
-39,/user/175226,Ross Collins,MoonRiders,,,1609.6,258.154,3.63
+39,/user/175226,Ross Collins,MoonRiders,MOON RIDERS,False,1609.6,258.154,3.63
 40,/user/138802,David Thomas,,,,1621.4,269.995,3.33
 41,/user/69166,Ian Nguru,,WESTERLEY THREE,False,1623.4,271.966,3.13
 42,/user/128814,Tim Cummins,,WESTERLEY TWO,False,1623.7,272.253,3.27

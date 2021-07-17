@@ -53,7 +53,7 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,time_secs,delta_secs,wk
 52,/user/183281,Chris Duffy bees,SDW,SOUTHBOROUGH (SDW) BEES,True,1334.2,133.788,3.25
 53,/user/6305,Mike Ade,,,,1335.7,135.26,3.21
 54,/user/171135,Tomasz (m) Poniatowski,MoonRiders,MOON RIDERS,False,1337.5,137.099,2.7
-55,/user/65709,Ian stephens Sdw (0),SDW,,,1337.6,137.138,3.14
+55,/user/65709,Ian stephens Sdw (0),SDW,SOUTHBOROUGH (SDW) SKEETERS,True,1337.6,137.138,3.14
 56,/user/120170,Laurent Gonon,,,,1337.7,137.251,3.65
 57,/user/234437,Ama Amra,,,,1337.7,137.293,3.45
 58,/user/175441,Tomas Nygren,,,,1337.8,137.37,2.92
@@ -80,7 +80,7 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,time_secs,delta_secs,wk
 79,/user/121774,Kette Rechts,,,,1522.9,322.473,2.86
 80,/user/123417,Mike Buckhurst,,,,1523.2,322.719,3.05
 81,/user/123242,Hendrik Erkamp,,,,1534.1,333.624,2.64
-82,/user/149081,Sam Doshi,,,,1555.6,355.207,2.98
+82,/user/149081,Sam Doshi,,WESTERLEY FOUR,True,1555.6,355.207,2.98
 83,/user/62564,Paulo Duarte,,,,1574.9,374.454,2.32
 84,/user/121915,Emanuel Águas,,,,1589.0,388.582,2.88
 85,/user/173992,Milan  Guzijan,,,,1595.7,395.259,2.9
@@ -89,7 +89,7 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,time_secs,delta_secs,wk
 ,/user/88613,Jerry Ball,,WESTERLEY THREE,False,,,
 ,/user/43482,Coco Maisie,,,,,,
 ,/user/150787,Paul Hindson (c),,,,,,
-,/user/221746,Tom Yates-ijaz,,,,,,
+,/user/221746,Tom Yates-ijaz,,WESTERLEY FOUR,True,,,
 ,,Nigel Davies,,,,,,
 ,,Vince Dey,,,,,,
 ,/user/206451,Lee Desbo50 (c),,,,,,

@@ -7,7 +7,7 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,time_secs,delta_secs,wk
 6,/user/165638,Mads Schnoor,Pocomotion,TEAM POCOMOTION (VIKINGS),True,1214.3,0.172,2.98
 7,/user/160071,Wouter Claes,MoonRiders,MOON RIDERS,True,1214.3,0.177,3.92
 8,/user/126796,Simon Miller sdw,SDW,SOUTHBOROUGH (SDW) BEES,True,1214.3,0.181,3.89
-9,/user/78811,Christophe Contant[pdl],Pedalers,,,1214.3,0.212,4.42
+9,/user/78811,Christophe Contant[pdl],Pedalers,PEDALERS,True,1214.3,0.212,4.42
 10,/user/35315,Mike Lister,DIRT,TRANSATLANTIC RAIDERS,True,1214.4,0.238,3.57
 11,/user/175915,Kristen Ege,,TEAM POCOMOTION (VIKINGS),True,1214.4,0.24,3.48
 12,/user/112364,Stefan Kruger sanz,,TEAM SANZ,True,1214.4,0.248,4.18
@@ -15,24 +15,24 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,time_secs,delta_secs,wk
 14,/user/79305,Carlos Cela,,,,1214.4,0.263,3.96
 15,/user/95553,J. Sammut (a),,TEAM POCOMOTION (BLIGHTY),True,1214.4,0.282,3.72
 16,/user/21747,Matthew Feely,,,,1214.4,0.284,3.65
-17,/user/17957,Tom Gakes [drft],,,,1214.4,0.299,3.77
-18,/user/148716,Stuart  Hardy [brt],#BRT,,,1214.4,0.306,3.57
+17,/user/17957,Tom Gakes [drft],,TEAM BTR,True,1214.4,0.299,3.77
+18,/user/148716,Stuart  Hardy [brt],#BRT,TEAM BTR,True,1214.4,0.306,3.57
 19,/user/66009,Jurgen Janssens,Pedalers,PEDALERS,True,1214.4,0.335,4.0
 20,/user/155757,"Jan Linden, vd",,,,1214.5,0.339,3.81
 21,/user/211440,Teun Sturmans,,,,1214.5,0.347,4.07
 22,/user/94990,Danie  Steyn sanz,,TEAM SANZ,True,1214.5,0.38,3.2
-23,/user/61282,Daniel Neugebauer,Pedalers,PEDALERS,True,1214.6,0.443,3.99
+23,/user/61282,Daniel Neugebauer,Pedalers,PEDALERS,False,1214.6,0.443,3.99
 24,/user/137497,Jørgen Vanbers[яʀ]a,яʀ,RASIO RACING,True,1214.6,0.509,3.6
 25,/user/143480,Mark Rowbottom яʀ,яʀ,RASIO RACING,False,1214.7,0.564,4.07
 26,/user/36792,Francois Iker,,,,1214.7,0.567,4.38
-27,/user/175226,Ross Collins,MoonRiders,,,1214.8,0.664,3.63
+27,/user/175226,Ross Collins,MoonRiders,MOON RIDERS,True,1214.8,0.664,3.63
 28,/user/6305,Mike Ade,,,,1214.8,0.721,3.6
 29,/user/171850,Eduardo Juez,,,,1215.0,0.862,4.09
 30,/user/168564,Marcus Garwood (o),,,,1215.3,1.182,4.14
 31,/user/177199,Julian Fussell sdw,SDW,SOUTHBOROUGH (SDW) BEES,True,1215.4,1.246,4.09
 32,/user/86836,Rob Bennett,,WESTERLEY THREE,True,1215.4,1.291,3.47
 33,/user/128814,Tim Cummins,,WESTERLEY TWO,True,1215.4,1.309,3.57
-34,/user/171135,Tomasz (m) Poniatowski,MoonRiders,MOON RIDERS,True,1216.0,1.872,3.18
+34,/user/171135,Tomasz (m) Poniatowski,MoonRiders,,,1216.0,1.872,3.18
 35,/user/56133,Peter Austin (bcc),,,,1217.0,2.842,3.89
 36,/user/149819,Peter Kennedy (m),,TEAM CAMERON,True,1217.2,3.095,3.31
 37,/user/178580,Timo Achenbach,MoonRiders,MOON RIDERS,False,1217.3,3.211,4.43
@@ -45,20 +45,20 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,time_secs,delta_secs,wk
 44,/user/141031,Kevan Unsworth (m),,TEAM CAMERON,True,1417.1,202.945,2.59
 45,/user/175441,Tomas Nygren,,,,1419.6,205.532,2.5
 46,/user/244023,Harald Hofmeier,,,,1420.3,206.169,3.27
-47,/user/221746,Tom Yates-ijaz,,,,1420.4,206.263,3.43
+47,/user/221746,Tom Yates-ijaz,,WESTERLEY FOUR,True,1420.4,206.263,3.43
 48,/user/70138,Andrew Beale,,WESTERLEY TWO,True,1420.6,206.496,3.22
 49,/user/65012,Dave Morrison,,WESTERLEY ONE,True,1423.9,209.817,3.3
 50,/user/132921,Iain Davidson ,,,,1427.0,212.917,3.23
 51,/user/243887,Jeffrey Hoevenaars,,,,1427.5,213.344,2.85
 52,/user/114811,Roberto Martí,,,,1430.6,216.481,3.18
 53,/user/80375,Arnaud M. (m/c),,,,1553.5,339.386,2.6
-54,/user/65709,Ian stephens Sdw (0),SDW,,,1575.9,361.801,3.2
+54,/user/65709,Ian stephens Sdw (0),SDW,SOUTHBOROUGH (SDW) SKEETERS,True,1575.9,361.801,3.2
 55,/user/213664,Garrett Metz,Pedalers,,,2000.5,786.406,1.91
 56,/user/228469,Lea Marigaux,,,,2011.7,797.587,2.1
 ,/user/228324,Nic Lee,,WESTERLEY TWO,False,,,
 ,/user/149169,Edu Harms [brt],#BRT,,,,,
 ,,Gillian Morgan,,,,,,
-,/user/149081,Sam Doshi,,,,,,
+,/user/149081,Sam Doshi,,WESTERLEY FOUR,True,,,
 ,/user/69166,Ian Nguru,,WESTERLEY THREE,True,,,
 ,/user/91958,Gt Thakkar,,WESTERLEY THREE,False,,,
 ,/user/170063,Marco Verhoogt,,,,,,
@@ -72,7 +72,7 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,time_secs,delta_secs,wk
 ,,Rafael Nunez,,,,,,
 ,,Malcolm Woolsey,,,,,,
 ,/user/172007,Patrick Boumann,,,,,,
-,/user/241161,Weiran Shen,,,,,,
+,/user/241161,Weiran Shen,,WESTERLEY TWO,False,,,
 ,,Simon-pierre Puech,,,,,,
 ,/user/243452,Kuba Skrzypczyk ,,,,,,
 ,,Lisa  Snell,,,,,,
