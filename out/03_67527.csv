@@ -1,99 +1,99 @@
-pos,userurl,name,rgt_teamname,vr_teamname,time_secs,delta_secs,wkg
-1,/user/143480,Mark Rowbottom яʀ,яʀ,RASIO RACING,1212.4,0.0,4.04
-2,/user/132783,Mathias  Bergkvist,,,1212.4,0.019,3.94
-3,/user/241893,Gaetan Calas,,,1212.4,0.051,3.65
-4,/user/74342,Nic Stevenson,,WESTERLEY ONE,1212.4,0.094,4.32
-5,/user/155757,"Jan Linden, vd",,,1212.5,0.113,3.55
-6,/user/5419,C. Riemens,,,1212.5,0.113,3.61
-7,/user/175915,Kristen Ege,,TEAM POCOMOTION (VIKINGS),1212.5,0.14,3.45
-8,/user/95553,J. Sammut (a),,TEAM POCOMOTION (BLIGHTY),1212.5,0.155,3.67
-9,/user/134948,Nick Greenhalghяʀ,яʀ,RASIO RACING,1212.5,0.16,3.78
-10,/user/193520,David Ellis (c) m,,,1212.5,0.172,3.55
-11,/user/39166,Ned Bowen,,TRANSATLANTIC RAIDERS,1212.5,0.178,3.7
-12,/user/17957,Tom Gakes [drft],,,1212.6,0.233,3.59
-13,/user/149169,Edu Harms [brt],#BRT,,1212.6,0.236,3.95
-14,/user/175692,James Osborn ,,,1212.6,0.272,3.95
-15,/user/61282,Daniel Neugebauer,Pedalers,PEDALERS,1212.6,0.276,3.85
-16,/user/79121,James Melville,,GLASGOW UNITED CC,1212.6,0.278,3.49
-17,/user/160071,Wouter Claes,MoonRiders,MOON RIDERS,1212.6,0.281,3.52
-18,/user/35315,Mike Lister,DIRT,TRANSATLANTIC RAIDERS,1212.7,0.303,3.55
-19,/user/79305,Carlos Cela,,,1212.7,0.317,3.81
-20,/user/129003,Andrzej Krajewski яʀ,яʀ,RASIO RACING,1212.7,0.331,3.91
-21,/user/126796,Simon Miller sdw,SDW,SOUTHBOROUGH (SDW) BEES,1212.7,0.355,3.3
-22,/user/224881,Stefano Brunelli,,,1212.7,0.394,3.43
-23,/user/78811,Christophe Contant[pdl],Pedalers,,1212.8,0.411,4.65
-24,/user/134803,Steve Mayes (m),,,1212.8,0.411,3.47
-25,/user/237823,Tom Heremans,,,1212.8,0.462,3.84
-26,/user/243810,Nicolas Moreno,,,1212.9,0.502,3.53
-27,/user/66009,Jurgen Janssens,Pedalers,PEDALERS,1212.9,0.512,3.85
-28,/user/128814,Tim Cummins,,WESTERLEY TWO,1212.9,0.521,3.65
-29,/user/171850,Eduardo Juez,,,1212.9,0.539,3.76
-30,/user/103369,Kader Allouni,,TEAM POCOMOTION (BLIGHTY),1213.0,0.644,3.91
-31,/user/112364,Stefan Kruger sanz,,TEAM SANZ,1213.0,0.668,4.02
-32,/user/197451,Chris (otr) Hopkinson(m),,,1213.0,0.695,3.9
-33,/user/94990,Danie  Steyn sanz,,TEAM SANZ,1213.1,0.708,3.37
-34,/user/175229,Matthias  Goossens,,,1213.1,0.719,4.04
-35,/user/213097,Angus Smith,,,1213.1,0.725,3.55
-36,/user/192123,Bonehead Younger ,,,1213.1,0.733,3.49
-37,/user/175441,Tomas Nygren,,,1213.2,0.81,2.94
-38,/user/228203,Thijmen Cornelissens,,,1213.2,0.842,3.97
-39,/user/56133,Peter Austin (bcc),,,1213.2,0.871,3.87
-40,/user/235888,Rich Heath,,,1213.3,0.902,3.25
-41,/user/238790,Jak yé Mitchell,,,1213.3,0.927,4.12
-42,/user/141031,Kevan Unsworth (m),,TEAM CAMERON,1213.3,0.979,3.01
-43,/user/228324,Nic Lee,,WESTERLEY TWO,1213.3,0.993,3.82
-44,/user/21747,Matthew Feely,,,1213.3,0.994,3.69
-45,/user/101319,Martin Wilson,,,1213.5,1.142,3.33
-46,/user/168564,Marcus Garwood (o),,,1213.6,1.259,4.33
-47,/user/127225,Kenneth Vansina[pdl],Pedalers,PEDALERS,1213.6,1.272,4.12
-48,/user/21787,Hakan Kutluca,Willkommen,,1213.8,1.402,3.75
-49,/user/178580,Timo Achenbach,MoonRiders,MOON RIDERS,1214.0,1.659,4.47
-50,/user/141761,Alasdair Mcalpine,,GLASGOW UNITED CC,1214.8,2.423,4.49
-51,/user/6305,Mike Ade,,,1216.8,4.399,3.5
-52,/user/194499,Kristof Keszthelyi-k,,,1216.8,4.417,3.37
-53,/user/96645,Marcin Szkudlarek,MoonRiders,MOON RIDERS,1216.8,4.495,3.76
-54,/user/241161,Weiran Shen,,,1219.0,6.602,3.44
-55,/user/210578,Ben Van der burg,,,1223.8,11.489,3.49
-56,/user/65012,Dave Morrison,,WESTERLEY ONE,1223.9,11.55,3.32
-57,/user/70138,Andrew Beale,,WESTERLEY TWO,1223.9,11.573,3.33
-58,/user/149081,Sam Doshi,,,1255.5,43.146,2.95
-59,/user/171135,Tomasz (m) Poniatowski,MoonRiders,MOON RIDERS,1347.0,134.648,2.83
-60,/user/114609,Jorge  Roldán ,MoonRiders,,1371.9,159.555,3.23
-61,/user/86973,David wcc Buckley wcc,,WESTERLEY ONE,1406.6,194.24099999999999,3.12
-62,/user/65709,Ian stephens Sdw (0),SDW,,1406.6,194.244,3.05
-63,/user/243887,Jeffrey Hoevenaars,,,1412.0,199.669,2.96
-64,/user/59104,Yahya Öksüzoglu,,,1417.7,205.36599999999999,2.8
-65,/user/40757,Moises Silva,,,1417.9,205.556,2.6
-66,/user/148716,Stuart  Hardy [brt],#BRT,,1447.5,235.16899999999998,3.16
-67,/user/172007,Patrick Boumann,,,1452.1,239.761,2.73
-68,/user/35568,Steeve Wall (m),,,1452.1,239.793,3.19
-69,/user/233599,Julien  Chtifou b,,,1453.7,241.39,3.11
-70,/user/219583,Dan Duffy,,,1456.8,244.489,2.75
-71,/user/162587,Pedro Reis,,,1506.4,294.068,3.52
-72,/user/213664,Garrett Metz,Pedalers,,1570.5,358.109,2.75
-73,/user/243235,Ben Revill,,,1916.4,704.009,1.65
-,/user/36792,Francois Iker,,,,,
-,/user/67054,Johan Oelofse sanz,,TEAM SANZ,,,
-,,Simon-pierre Puech,,,,,
-,/user/7518,Domen Štraser,,,,,
-,/user/167006,Mike Murray,,,,,
-,/user/242693,Mark Harris,,,,,
-,/user/237208,Guillaume Gibert,,,,,
-,,Malcolm Woolsey,,,,,
-,,Jason Harmer,,,,,
-,/user/200597,Asbjørn May,,,,,
-,/user/107594,Grant Skeeters,SDW,,,,
-,/user/69166,Ian Nguru,,WESTERLEY THREE,,,
-,,Fred  Tebbenham,,,,,
-,/user/150787,Paul Hindson (c),,,,,
-,/user/87547,Nick Beale,,,,,
-,/user/215484,Dotty Watts,,,,,
-,/user/86836,Rob Bennett,,WESTERLEY THREE,,,
-,/user/72623,Kevin Walker otr,dcc,,,,
-,,Vince Dey,,,,,
-,/user/31110,Leon Bond,,,,,
-,/user/91958,Gt Thakkar,,WESTERLEY THREE,,,
-,/user/153498,Robertas  Šnioka,,,,,
-,/user/221746,Tom Yates-ijaz,,,,,
-,/user/241354,Srushti Desai,,,,,
-,/user/88613,Jerry Ball,,,,,
+pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,time_secs,delta_secs,wkg
+1,/user/143480,Mark Rowbottom яʀ,яʀ,RASIO RACING,True,1212.4,0.0,4.04
+2,/user/132783,Mathias  Bergkvist,,,,1212.4,0.019,3.94
+3,/user/241893,Gaetan Calas,,,,1212.4,0.051,3.65
+4,/user/74342,Nic Stevenson,,WESTERLEY ONE,True,1212.4,0.094,4.32
+5,/user/155757,"Jan Linden, vd",,,,1212.5,0.113,3.55
+6,/user/5419,C. Riemens,,,,1212.5,0.113,3.61
+7,/user/175915,Kristen Ege,,TEAM POCOMOTION (VIKINGS),True,1212.5,0.14,3.45
+8,/user/95553,J. Sammut (a),,TEAM POCOMOTION (BLIGHTY),True,1212.5,0.155,3.67
+9,/user/134948,Nick Greenhalghяʀ,яʀ,RASIO RACING,True,1212.5,0.16,3.78
+10,/user/193520,David Ellis (c) m,,,,1212.5,0.172,3.55
+11,/user/39166,Ned Bowen,,TRANSATLANTIC RAIDERS,True,1212.5,0.178,3.7
+12,/user/17957,Tom Gakes [drft],,,,1212.6,0.233,3.59
+13,/user/149169,Edu Harms [brt],#BRT,,,1212.6,0.236,3.95
+14,/user/175692,James Osborn ,,,,1212.6,0.272,3.95
+15,/user/61282,Daniel Neugebauer,Pedalers,PEDALERS,True,1212.6,0.276,3.85
+16,/user/79121,James Melville,,GLASGOW UNITED CC,True,1212.6,0.278,3.49
+17,/user/160071,Wouter Claes,MoonRiders,MOON RIDERS,True,1212.6,0.281,3.52
+18,/user/35315,Mike Lister,DIRT,TRANSATLANTIC RAIDERS,True,1212.7,0.303,3.55
+19,/user/79305,Carlos Cela,,,,1212.7,0.317,3.81
+20,/user/129003,Andrzej Krajewski яʀ,яʀ,RASIO RACING,False,1212.7,0.331,3.91
+21,/user/126796,Simon Miller sdw,SDW,SOUTHBOROUGH (SDW) BEES,True,1212.7,0.355,3.3
+22,/user/224881,Stefano Brunelli,,,,1212.7,0.394,3.43
+23,/user/78811,Christophe Contant[pdl],Pedalers,,,1212.8,0.411,4.65
+24,/user/134803,Steve Mayes (m),,,,1212.8,0.411,3.47
+25,/user/237823,Tom Heremans,,,,1212.8,0.462,3.84
+26,/user/243810,Nicolas Moreno,,,,1212.9,0.502,3.53
+27,/user/66009,Jurgen Janssens,Pedalers,PEDALERS,True,1212.9,0.512,3.85
+28,/user/128814,Tim Cummins,,WESTERLEY TWO,True,1212.9,0.521,3.65
+29,/user/171850,Eduardo Juez,,,,1212.9,0.539,3.76
+30,/user/103369,Kader Allouni,,TEAM POCOMOTION (BLIGHTY),True,1213.0,0.644,3.91
+31,/user/112364,Stefan Kruger sanz,,TEAM SANZ,True,1213.0,0.668,4.02
+32,/user/197451,Chris (otr) Hopkinson(m),,,,1213.0,0.695,3.9
+33,/user/94990,Danie  Steyn sanz,,TEAM SANZ,True,1213.1,0.708,3.37
+34,/user/175229,Matthias  Goossens,,,,1213.1,0.719,4.04
+35,/user/213097,Angus Smith,,,,1213.1,0.725,3.55
+36,/user/192123,Bonehead Younger ,,,,1213.1,0.733,3.49
+37,/user/175441,Tomas Nygren,,,,1213.2,0.81,2.94
+38,/user/228203,Thijmen Cornelissens,,,,1213.2,0.842,3.97
+39,/user/56133,Peter Austin (bcc),,,,1213.2,0.871,3.87
+40,/user/235888,Rich Heath,,,,1213.3,0.902,3.25
+41,/user/238790,Jak yé Mitchell,,,,1213.3,0.927,4.12
+42,/user/141031,Kevan Unsworth (m),,TEAM CAMERON,True,1213.3,0.979,3.01
+43,/user/228324,Nic Lee,,WESTERLEY TWO,True,1213.3,0.993,3.82
+44,/user/21747,Matthew Feely,,,,1213.3,0.994,3.69
+45,/user/101319,Martin Wilson,,,,1213.5,1.142,3.33
+46,/user/168564,Marcus Garwood (o),,,,1213.6,1.259,4.33
+47,/user/127225,Kenneth Vansina[pdl],Pedalers,PEDALERS,False,1213.6,1.272,4.12
+48,/user/21787,Hakan Kutluca,Willkommen,,,1213.8,1.402,3.75
+49,/user/178580,Timo Achenbach,MoonRiders,MOON RIDERS,True,1214.0,1.659,4.47
+50,/user/141761,Alasdair Mcalpine,,GLASGOW UNITED CC,True,1214.8,2.423,4.49
+51,/user/6305,Mike Ade,,,,1216.8,4.399,3.5
+52,/user/194499,Kristof Keszthelyi-k,,,,1216.8,4.417,3.37
+53,/user/96645,Marcin Szkudlarek,MoonRiders,MOON RIDERS,False,1216.8,4.495,3.76
+54,/user/241161,Weiran Shen,,,,1219.0,6.602,3.44
+55,/user/210578,Ben Van der burg,,,,1223.8,11.489,3.49
+56,/user/65012,Dave Morrison,,WESTERLEY ONE,True,1223.9,11.55,3.32
+57,/user/70138,Andrew Beale,,WESTERLEY TWO,False,1223.9,11.573,3.33
+58,/user/149081,Sam Doshi,,,,1255.5,43.146,2.95
+59,/user/171135,Tomasz (m) Poniatowski,MoonRiders,MOON RIDERS,False,1347.0,134.648,2.83
+60,/user/114609,Jorge  Roldán ,MoonRiders,,,1371.9,159.555,3.23
+61,/user/86973,David wcc Buckley wcc,,WESTERLEY ONE,False,1406.6,194.24099999999999,3.12
+62,/user/65709,Ian stephens Sdw (0),SDW,,,1406.6,194.244,3.05
+63,/user/243887,Jeffrey Hoevenaars,,,,1412.0,199.669,2.96
+64,/user/59104,Yahya Öksüzoglu,,,,1417.7,205.36599999999999,2.8
+65,/user/40757,Moises Silva,,,,1417.9,205.556,2.6
+66,/user/148716,Stuart  Hardy [brt],#BRT,,,1447.5,235.16899999999998,3.16
+67,/user/172007,Patrick Boumann,,,,1452.1,239.761,2.73
+68,/user/35568,Steeve Wall (m),,,,1452.1,239.793,3.19
+69,/user/233599,Julien  Chtifou b,,,,1453.7,241.39,3.11
+70,/user/219583,Dan Duffy,,,,1456.8,244.489,2.75
+71,/user/162587,Pedro Reis,,,,1506.4,294.068,3.52
+72,/user/213664,Garrett Metz,Pedalers,,,1570.5,358.109,2.75
+73,/user/243235,Ben Revill,,,,1916.4,704.009,1.65
+,/user/36792,Francois Iker,,,,,,
+,/user/67054,Johan Oelofse sanz,,TEAM SANZ,False,,,
+,,Simon-pierre Puech,,,,,,
+,/user/7518,Domen Štraser,,,,,,
+,/user/167006,Mike Murray,,,,,,
+,/user/242693,Mark Harris,,,,,,
+,/user/237208,Guillaume Gibert,,,,,,
+,,Malcolm Woolsey,,,,,,
+,,Jason Harmer,,,,,,
+,/user/200597,Asbjørn May,,,,,,
+,/user/107594,Grant Skeeters,SDW,,,,,
+,/user/69166,Ian Nguru,,WESTERLEY THREE,True,,,
+,,Fred  Tebbenham,,,,,,
+,/user/150787,Paul Hindson (c),,,,,,
+,/user/87547,Nick Beale,,,,,,
+,/user/215484,Dotty Watts,,,,,,
+,/user/86836,Rob Bennett,,WESTERLEY THREE,True,,,
+,/user/72623,Kevin Walker otr,dcc,,,,,
+,,Vince Dey,,,,,,
+,/user/31110,Leon Bond,,,,,,
+,/user/91958,Gt Thakkar,,WESTERLEY THREE,False,,,
+,/user/153498,Robertas  Šnioka,,,,,,
+,/user/221746,Tom Yates-ijaz,,,,,,
+,/user/241354,Srushti Desai,,,,,,
+,/user/88613,Jerry Ball,,WESTERLEY THREE,False,,,

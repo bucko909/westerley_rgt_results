@@ -45,25 +45,14 @@ def update_events():
             open(f'cache/{race_id}.html', 'w').write(html)
         csvfile = open(f'out/{race_no:02n}_{race_id}.csv', 'w')
         csvwriter = csv.writer(csvfile)
-        csvwriter.writerow(['pos', 'userurl', 'name', 'rgt_teamname', 'vr_teamname', 'time_secs', 'delta_secs', 'wkg'])
+        csvwriter.writerow(['pos', 'userurl', 'name', 'rgt_teamname', 'vr_teamname', 'team_qualifier', 'time_secs', 'delta_secs', 'wkg'])
         team_results_dict = {}
         for row in parse_event(html, teams):
             csvwriter.writerow(row)
-            ingest_row(row, users)
-            vr_teamname = row[4]
-            if vr_teamname:
+            ingest_row(row, users, team_points)
+            vr_teamname, team_qualifier = row[4:6]
+            if team_qualifier:
                 team_results_dict.setdefault(vr_teamname, []).append(row[0])
-        race_team_points = []
-        for team, team_results in team_results_dict.items():
-            race_team_points.append((team, sum(101 - pos for pos in team_results[:2] if pos is not None)))
-        race_team_points.sort(key=lambda x: x[1], reverse=True)
-        csvfile = open(f'out/{race_no:02n}_{race_id}_teams.csv', 'w')
-        csvwriter = csv.writer(csvfile)
-        csvwriter.writerow(['team_name', 'points'])
-        for team, points in race_team_points:
-            team_points.setdefault(team, 0)
-            team_points[team] += points
-            csvwriter.writerow([team, points])
         write_users(users, f'out/{race_no:02n}_{race_id}_users_cumulative.csv')
         write_teams(team_points, f'out/{race_no:02n}_{race_id}_teams_cumulative.csv')
 
@@ -73,11 +62,11 @@ def update_events():
 def write_users(users, fname='out/user_results.csv'):
     csvfile = open(fname, 'w')
     csvwriter = csv.writer(csvfile)
-    csvwriter.writerow(['pos', 'url', 'name', 'points', 'best', 'race count', 'win count', '2nd count', '3rd count'])
+    csvwriter.writerow(['pos', 'url', 'name', 'points', 'team', 'team points', 'best', 'race count', 'win count', '2nd count', '3rd count'])
     users = list(users.items())
     users.sort(key=lambda u: u[1]['points'], reverse=True)
     for pos, u in enumerate(users, start=1):
-        csvwriter.writerow([pos, 'https://rgtdb.com' + u[0], u[1]['name'], u[1]['points'], u[1]['best'], u[1]['races'], u[1]['golds'], u[1]['silvers'], u[1]['bronzes']])
+        csvwriter.writerow([pos, 'https://rgtdb.com' + u[0], u[1]['name'], u[1]['points'], u[1]['team'], u[1]['team_points'], u[1]['best'], u[1]['races'], u[1]['golds'], u[1]['silvers'], u[1]['bronzes']])
 
 def write_teams(teams, fname='out/team_results.csv'):
     csvfile = open(fname, 'w')
@@ -90,6 +79,7 @@ def write_teams(teams, fname='out/team_results.csv'):
 
 def parse_event(html, teams):
     data = lxml.etree.HTML(html)
+    vr_team_runners = dict()
     for result in data.xpath('/html/body/div/main/div/div/div[@id="results"]/table/tbody/tr'):
         postd, _trophytd, userdatatd, timetd, wkgtd, _rankchangetd = result.xpath('td')
         dnfspan = postd.xpath('span')
@@ -133,15 +123,25 @@ def parse_event(html, teams):
             delta = None
             wkg = None
         vr_teamname = teams.get(userurl)
-        yield (pos, userurl, username, rgt_teamname, vr_teamname, time, delta, wkg)
+        if vr_teamname:
+            vr_team_finishers = vr_team_runners.setdefault(vr_teamname, [])
+            vr_team_finishers.append(userurl)
+            if len(vr_team_finishers) <= 2:
+                team_qualifier = True
+            else:
+                team_qualifier = False
+        else:
+            team_qualifier = None
+        yield (pos, userurl, username, rgt_teamname, vr_teamname, team_qualifier, time, delta, wkg)
 
-def ingest_row(row, users):
-    pos, userurl, username, rgt_teamname, vr_teamname, time, delta, wkg = row
+def ingest_row(row, users, team_points):
+    pos, userurl, username, rgt_teamname, vr_teamname, team_qualifier, time, delta, wkg = row
     if pos:
         if userurl is None:
             raise Exception(lxml.html.tostring(result))
-        users.setdefault(userurl, {'name': username, 'points': 0, 'races': 0, 'golds': 0, 'silvers': 0, 'bronzes': 0})
+        users.setdefault(userurl, {'name': username, 'points': 0, 'team_points': 0, 'races': 0, 'golds': 0, 'silvers': 0, 'bronzes': 0, 'team': vr_teamname})
         user = users[userurl]
+        assert vr_teamname == user['team'], (vr_teamname, user)
         user.setdefault('best', pos)
         user['best'] = min(pos, user['best'])
         if pos == 1:
@@ -150,8 +150,13 @@ def ingest_row(row, users):
             user['silvers'] += 1
         elif pos == 3:
             user['bronzes'] += 1
-        user['points'] += max(1, 101 - pos)
+        race_points = max(1, 101 - pos)
+        user['points'] += race_points
         user['races'] += 1
+        if team_qualifier:
+            team_points.setdefault(vr_teamname, 0)
+            team_points[vr_teamname] += race_points
+            user['team_points'] += race_points
 
 if __name__ == '__main__':
     update_events()
