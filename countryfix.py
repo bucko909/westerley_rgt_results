@@ -17,7 +17,7 @@ def get_scoreboard_me():
     i = iter(csvreader)
     next(i)
     for row in i:
-        yield row[1:4]
+        yield row[1:3] + [row[4]]
 
 dave_by_score = {}
 for name, country, score in get_scoreboard_dave():
@@ -30,8 +30,6 @@ csvfile = open('data/countries.csv', 'w')
 csvwriter = csv.writer(csvfile)
 for url, name, score in get_scoreboard_me():
     name = name.replace('  ', ' ')
-    if name == 'Kette Rechts':
-        continue
     dave_possibilities = dave_by_score[score]
     if len(dave_possibilities) == 1:
         del dave_by_score[score]

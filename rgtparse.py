@@ -34,10 +34,20 @@ def get_westerley():
         members[url] = int(after) if after else 0
     return members
 
+def get_countries():
+    countries = {}
+    csvfile = open(f'data/countries.csv', 'r', newline='')
+    csvreader = csv.reader(csvfile)
+    for url, name, dave_name, country in csvreader:
+        if country != '':
+            countries[url.replace('https://rgtdb.com', '')] = country
+    return countries
+
 def update_events():
     users = {}
     teams = get_teams()
     westerley = get_westerley()
+    countries = get_countries()
     team_points = {}
     if not os.path.exists('out'):
         os.mkdir('out')
@@ -68,22 +78,22 @@ def update_events():
         #    team_name = aliases.get(team_name, team_name)
         #    if points != team_points.get(team_name):
         #        print(team_name, points, team_points.get(team_name), team_points.get(team_name,0) - points)
-        write_users(users, f'out/{race_no:02n}_{race_id}_users_cumulative.csv')
+        write_users(users, countries, f'out/{race_no:02n}_{race_id}_users_cumulative.csv')
         write_westerley(users, f'out/{race_no:02n}_{race_id}_westerley_cumulative.csv')
         write_teams(team_points, f'out/{race_no:02n}_{race_id}_teams_cumulative.csv')
 
-    write_users(users)
+    write_users(users, countries)
     write_westerley(users)
     write_teams(team_points)
 
-def write_users(users, fname='out/user_results.csv'):
+def write_users(users, countries, fname='out/user_results.csv'):
     csvfile = open(fname, 'w')
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(['pos', 'url', 'name', 'points', 'team', 'team points', 'westerley points', 'best', 'race count', 'win count', '2nd count', '3rd count'])
     users = list(users.items())
     users.sort(key=lambda u: u[1]['points'], reverse=True)
     for pos, u in enumerate(users, start=1):
-        csvwriter.writerow([pos, 'https://rgtdb.com' + u[0], u[1]['name'], u[1]['points'], u[1]['team'], u[1]['team_points'], u[1]['westerley_points'], u[1]['best'], u[1]['races'], u[1]['golds'], u[1]['silvers'], u[1]['bronzes']])
+        csvwriter.writerow([pos, 'https://rgtdb.com' + u[0], u[1]['name'], countries.get(u[0]), u[1]['points'], u[1]['team'], u[1]['team_points'], u[1]['westerley_points'], u[1]['best'], u[1]['races'], u[1]['golds'], u[1]['silvers'], u[1]['bronzes']])
 
 def write_westerley(users, fname='out/westerley_results.csv'):
     csvfile = open(fname, 'w')
