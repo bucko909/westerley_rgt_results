@@ -1,6 +1,6 @@
 # Westerley VR RGT Results Scraper
 
-Scraper for rgtdb to get results for Westerley VR competition
+Scraper for rgtdb to get results for Westerley VR competition.
 
 Actual output data is in [out](out/).
 
@@ -12,3 +12,5 @@ Actual output data is in [out](out/).
 * `team_results.csv` -- final team results (same as cumulative after the final race).
 
 Ingests the team members and events list in [data](data/). Should be as simple as adding a new event there and re-running to get latest results.
+
+The data in out/ represents a combination of public information from rgtdb and from the Westerley CC and West London Cycling web sites.
