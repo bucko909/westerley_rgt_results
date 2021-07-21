@@ -69,7 +69,10 @@ def update_events():
             csvwriter.writerow(row)
             ingest_row(row, users, team_points)
             vr_teamname, team_qualifier = row[4:6]
-        check_csv = csv.reader(open(f'data/team_after_{race_no}.csv', 'r'))
+        try:
+            check_csv = csv.reader(open(f'data/team_after_{race_no}.csv', 'r'))
+        except FileNotFoundError:
+            pass
         # Ugly team verification code.
         #print(race_no)
         #for team_name, pointss in check_csv:
