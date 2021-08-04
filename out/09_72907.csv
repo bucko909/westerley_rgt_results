@@ -19,7 +19,7 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs
 18,/user/193520,David Ellis (c) m,,,,,1416.0,97.73400000000001,3.69
 19,/user/129003,Andrzej Krajewski яʀ,яʀ,RASIO RACING,False,,1422.9,104.601,4.11
 20,/user/39166,Ned Bowen,,TRANSATLANTIC RAIDERS,True,,1426.6,108.336,4.23
-21,/user/108193,Stevie Couper,,,,,1443.5,125.279,4.12
+21,/user/108193,Stevie Couper,,GLASGOW UNITED CC,True,,1443.5,125.279,4.12
 22,/user/56133,Peter Austin (m),,,,,1443.5,125.294,3.87
 23,/user/70138,Andrew Beale,,WESTERLEY TWO,True,2,1444.0,125.732,3.61
 24,/user/62325,Ben Phillips[яʀ],яʀ,RASIO RACING,False,,1457.5,139.278,3.42
@@ -27,7 +27,7 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs
 26,/user/222629,Eric Leichtfuss,,,,,1469.5,151.204,3.37
 27,/user/21747,Matthew Feely,,,,,1471.7,153.496,3.47
 28,/user/96645,Marcin Szkudlarek,MoonRiders,MOON RIDERS,True,,1479.1,160.89600000000002,3.85
-29,/user/171135,Tomasz Poniatowski,MoonRiders,,,,1495.5,177.227,2.78
+29,/user/171135,Tomasz Poniatowski,MoonRiders,MOON RIDERS,False,,1495.5,177.227,2.78
 30,/user/86973,David wcc Buckley wcc,,WESTERLEY ONE,True,3,1509.3,191.044,3.08
 31,/user/128814,Tim Cummins,,WESTERLEY TWO,True,4,1513.0,194.766,3.55
 32,/user/221746,Tom Yates-ijaz,,WESTERLEY FOUR,True,5,1514.2,195.918,3.41

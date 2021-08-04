@@ -23,7 +23,24 @@ def get_teams():
     csvfile = open(f'data/teams.csv', 'r', newline='')
     csvreader = csv.reader(csvfile)
     for row in csvreader:
-        teams[row[0]] = {'name': row[1], 'after': int(row[2]) if row[2] else 1, 'before': int(row[3]) if row[3] else float('inf')}
+        if len(row) > 2:
+            extras = []
+            after = None
+            for i in range(1, len(row) // 2):
+                start, end = row[i*2:i*2+2]
+                if end:
+                    if not start:
+                        start = 1
+                    else:
+                        start = int(start)
+                    end = int(end)
+                    extras.extend(range(start, end+1))
+                elif start:
+                    assert after is None
+                    after = int(start)
+                else:
+                    assert after is None and len(extras) == 0
+        teams[row[0]] = {'name': row[1], 'after': after, 'extras': extras}
     return teams
 
 def get_westerley():
@@ -165,7 +182,7 @@ def parse_event(html, teams, westerley, race_no):
             delta = None
             wkg = None
         vr_team = teams.get(userurl)
-        if vr_team is not None and vr_team['after'] <= race_no <= vr_team['before']:
+        if vr_team is not None and is_in_range(vr_team, race_no):
             vr_teamname = vr_team['name']
             vr_team_finishers = vr_team_runners.setdefault(vr_teamname, [])
             vr_team_finishers.append(userurl)
@@ -182,6 +199,11 @@ def parse_event(html, teams, westerley, race_no):
         else:
             westerley_pos = None
         yield (pos, userurl, username, rgt_teamname, vr_teamname, team_qualifier, westerley_pos, time, delta, wkg)
+
+def is_in_range(vr_team, race_no):
+    if len(vr_team['extras']) == 0 and vr_team['after'] is None:
+        return True
+    return race_no in vr_team['extras'] or vr_team['after'] is not None and race_no >= vr_team['after']
 
 def ingest_row(row, users, team_points):
     pos, userurl, username, rgt_teamname, vr_teamname, team_qualifier, westerley_pos, time, delta, wkg = row
