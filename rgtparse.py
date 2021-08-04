@@ -116,9 +116,9 @@ def write_users(users, countries, fname='out/user_results.csv'):
         if 'last_pos' in u[1]:
             last_pos = u[1]['last_pos']
             if u[1]['last_pos'] > pos:
-                change = '▼'
-            elif u[1]['last_pos'] < pos:
                 change = '▲'
+            elif u[1]['last_pos'] < pos:
+                change = '▼'
             else:
                 change = '-'
         else:
