@@ -109,11 +109,23 @@ def update_events():
 def write_users(users, countries, fname='out/user_results.csv'):
     csvfile = open(fname, 'w')
     csvwriter = csv.writer(csvfile)
-    csvwriter.writerow(['pos', 'url', 'name', 'country', 'points', 'team', 'team points', 'westerley points', 'best', 'race count', 'win count', '2nd count', '3rd count'])
+    csvwriter.writerow(['pos', 'last_pos', 'change', 'url', 'name', 'country', 'points', 'team', 'team points', 'westerley points', 'best', 'race count', 'win count', '2nd count', '3rd count'])
     users = list(users.items())
     users.sort(key=lambda u: u[1]['points'], reverse=True)
     for pos, u in enumerate(users, start=1):
-        csvwriter.writerow([pos, 'https://rgtdb.com' + u[0], u[1]['name'], countries.get(u[0]), u[1]['points'], u[1]['team'], u[1]['team_points'], u[1]['westerley_points'], u[1]['best'], u[1]['races'], u[1]['golds'], u[1]['silvers'], u[1]['bronzes']])
+        if 'last_pos' in u[1]:
+            last_pos = u[1]['last_pos']
+            if u[1]['last_pos'] > pos:
+                change = '▼'
+            elif u[1]['last_pos'] < pos:
+                change = '▲'
+            else:
+                change = '-'
+        else:
+            last_pos = ''
+            change = '*'
+        csvwriter.writerow([pos, last_pos, change, 'https://rgtdb.com' + u[0], u[1]['name'], countries.get(u[0]), u[1]['points'], u[1]['team'], u[1]['team_points'], u[1]['westerley_points'], u[1]['best'], u[1]['races'], u[1]['golds'], u[1]['silvers'], u[1]['bronzes']])
+        u[1]['last_pos'] = pos
 
 def write_westerley(users, fname='out/westerley_results.csv'):
     csvfile = open(fname, 'w')
