@@ -2,6 +2,7 @@ import lxml.etree, lxml.html
 import os.path
 import requests
 import csv
+import datetime
 
 def parse_time(time_str):
     if time_str.startswith('+ '):
@@ -81,9 +82,9 @@ def update_events():
             open(f'cache/{race_id}.html', 'w').write(html)
         csvfile = open(f'out/{race_no:02n}_{race_id}.csv', 'w')
         csvwriter = csv.writer(csvfile)
-        csvwriter.writerow(['pos', 'userurl', 'name', 'rgt_teamname', 'vr_teamname', 'team_qualifier', 'westerley_pos', 'time_secs', 'delta_secs', 'wkg'])
+        csvwriter.writerow(['pos', 'userurl', 'name', 'rgt_teamname', 'vr_teamname', 'team_qualifier', 'westerley_pos', 'time_secs', 'delta_secs', 'wkg', 'time_human', 'delta_human'])
         for row in parse_event(html, teams, westerley, race_no):
-            csvwriter.writerow(row)
+            csvwriter.writerow(row + tuple(map(lambda x: (datetime.datetime(2000, 1, 1) + datetime.timedelta(seconds=x)).strftime('%M:%S.%f')[:-3] if x is not None else None, row[7:9])))
             ingest_row(row, users, team_points)
             vr_teamname, team_qualifier = row[4:6]
         try:
