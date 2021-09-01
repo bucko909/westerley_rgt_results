@@ -1,0 +1,47 @@
+pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs,delta_secs,wkg,time_human,delta_human
+1,/user/182809,Robert Jenko,,,,,1361.4,0.0,4.03,22:41.400,00:00.000
+2,/user/95553,J. Sammut (a),,TEAM POCOMOTION (BLIGHTY),True,,1361.5,0.109,4.14,22:41.500,00:00.109
+3,/user/134948,Nick Greenhalghяʀ,яʀ,RASIO RACING,True,1,1361.6,0.147,4.39,22:41.600,00:00.147
+4,/user/67054,Johan Oelofse sanz,,TEAM SANZ,True,,1361.9,0.447,4.15,22:41.900,00:00.447
+5,/user/79121,James Melville,,GLASGOW UNITED CC,True,,1361.9,0.509,4.01,22:41.900,00:00.509
+6,/user/160071,Wouter Claes,MoonRiders,MOON RIDERS,True,,1362.2,0.777,3.98,22:42.200,00:00.777
+7,/user/106173,Hendre Knoetze sanz,,TEAM SANZ,True,,1362.3,0.844,4.11,22:42.300,00:00.844
+8,/user/143480,Mark Rowbottom яʀ,яʀ,RASIO RACING,True,,1362.9,1.497,4.1,22:42.900,00:01.497
+9,/user/79305,Carlos Cela,,,,,1363.5,2.045,4.02,22:43.500,00:02.045
+10,/user/129003,Andrzej Krajewski яʀ,яʀ,RASIO RACING,False,,1364.6,3.138,4.26,22:44.600,00:03.138
+11,/user/141761,Alasdair Mcalpine,,GLASGOW UNITED CC,True,,1364.7,3.217,4.58,22:44.700,00:03.217
+12,/user/137497,Jørgen Vanbers[яʀ],яʀ,RASIO RACING,False,,1364.7,3.243,3.91,22:44.700,00:03.243
+13,/user/119409,Alex Gold,,,,,1364.8,3.32,3.59,22:44.800,00:03.320
+14,/user/56133,Peter Austin (m),,,,,1365.6,4.184,4.17,22:45.600,00:04.184
+15,/user/32313,Alex Pleger [яʀ],яʀ,,,,1370.4,8.927,3.66,22:50.400,00:08.927
+16,/user/140561,Shawn Murtough,,,,,1371.5,10.077,3.93,22:51.500,00:10.077
+17,/user/61282,Daniel Neugebauer,Pedalers,PEDALERS,True,,1376.4,14.975,3.91,22:56.400,00:14.975
+18,/user/21747,Matthew Feely,,,,,1386.1,24.638,3.49,23:06.100,00:24.638
+19,/user/6305,Mike Ade otr,,,,,1394.9,33.463,3.57,23:14.900,00:33.463
+20,/user/171135,Tomasz Poniatowski,MoonRiders,MOON RIDERS,True,,1395.0,33.594,3.01,23:15.000,00:33.594
+21,/user/175441,Tomas Nygren,,,,,1395.3,33.817,3.05,23:15.300,00:33.817
+22,/user/74342,Nic Stevenson,,WESTERLEY ONE,True,2,1395.9,34.442,4.31,23:15.900,00:34.442
+23,/user/70138,Andrew Beale c,,WESTERLEY TWO,True,3,1437.4,75.991,3.6,23:57.400,01:15.991
+24,/user/39166,Ned Bowen,,TRANSATLANTIC RAIDERS,True,,1443.3,81.89099999999999,3.72,24:03.300,01:21.891
+25,/user/62325,Ben Phillips[яʀ],яʀ,,,,1443.9,82.42699999999999,3.83,24:03.900,01:22.427
+26,/user/193053,David Inwood,,,,,1444.1,82.625,3.92,24:04.100,01:22.625
+27,/user/195632,Olly Olly,,,,,1444.4,83.001,3.37,24:04.400,01:23.001
+28,/user/193520,David Ellis (c) m,,,,,1446.3,84.838,3.35,24:06.300,01:24.838
+29,/user/141031,Kevan Unsworth (m),,TEAM CAMERON,True,,1481.9,120.508,2.51,24:41.900,02:00.508
+30,/user/86973,David wcc Buckley wcc,,WESTERLEY ONE,True,4,1482.3,120.88,3.17,24:42.300,02:00.880
+31,/user/101319,Martin Wilson,,,,,1482.5,121.065,3.03,24:42.500,02:01.065
+32,/user/96645,Marcin Szkudlarek,MoonRiders,MOON RIDERS,False,,1482.5,121.084,3.55,24:42.500,02:01.084
+33,/user/149819,Peter Kennedy (m),,TEAM CAMERON,True,,1482.7,121.279,3.05,24:42.700,02:01.279
+34,/user/94149,James Dicks,,,,,1482.9,121.463,4.33,24:42.900,02:01.463
+35,/user/114145,Rod Costa,,,,,1510.9,149.499,3.54,25:10.900,02:29.499
+36,/user/151506,Lukas Galka [uect],,,,,1540.1,178.629,3.53,25:40.100,02:58.629
+37,/user/221746,Tom Yates-ijaz,,WESTERLEY FOUR,True,5,1540.7,179.29399999999998,3.25,25:40.700,02:59.294
+38,/user/65012,Dave Morrison,,WESTERLEY ONE,False,6,1541.1,179.652,3.27,25:41.100,02:59.652
+39,/user/91958,Gt Thakkar,,WESTERLEY THREE,True,7,1541.3,179.824,2.88,25:41.300,02:59.824
+40,/user/51825,Marc Arc fawcett,,,,,1545.5,184.088,2.94,25:45.500,03:04.088
+41,/user/128814,Tim Cummins,,WESTERLEY TWO,True,8,1657.1,295.661,3.21,27:37.100,04:55.661
+42,/user/216092,Neil Forsythe,,,,,1662.3,300.832,3.18,27:42.300,05:00.832
+43,/user/123417,Mike Buckhurst,,,,,1714.4,352.954,2.66,28:34.400,05:52.954
+44,/user/257738,Flying Finnz,,,,,1796.2,434.723,5.12,29:56.200,07:14.723
+45,/user/222872,Jo Gon,,,,,2049.7,688.232,1.66,34:09.700,11:28.232
+46,/user/255235,Chris Yag,,,,,2066.1,704.648,1.98,34:26.100,11:44.648
