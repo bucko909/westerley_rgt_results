@@ -1,0 +1,70 @@
+pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs,delta_secs,wkg,time_human,delta_human
+1,/user/17957,Tom Gakes [d],[D],TEAM BTR,True,,1380.0,0.0,3.92,23:00.000,00:00.000
+2,/user/126963,Miles Askew,,,,,1381.0,0.922,4.43,23:01.000,00:00.922
+3,/user/134948,Nick Greenhalghяʀ,яʀ,RASIO RACING,True,1,1381.3,1.263,4.49,23:01.300,00:01.263
+4,/user/79121,James Melville,,GLASGOW UNITED CC,True,,1381.3,1.299,4.69,23:01.300,00:01.299
+5,/user/67054,Johan Oelofse sanz,,TEAM SANZ,True,,1381.4,1.311,4.32,23:01.400,00:01.311
+6,/user/84367,Doug Hart,ICC,,,,1381.4,1.373,4.39,23:01.400,00:01.373
+7,/user/95553,J. Sammut (a),Pocomotion,TEAM POCOMOTION (BLIGHTY),True,,1382.5,2.501,4.0,23:02.500,00:02.501
+8,/user/160071,Wouter Claes [mr],MoonRiders,MOON RIDERS,True,,1382.7,2.609,4.0,23:02.700,00:02.609
+9,/user/106173,Hendre Knoetze sanz,,TEAM SANZ,True,,1382.7,2.672,4.42,23:02.700,00:02.672
+10,/user/39166,Ned Bowen [d],[D],TRANSATLANTIC RAIDERS,True,,1382.7,2.692,4.25,23:02.700,00:02.692
+11,/user/36792,Francois Iker [mr],MoonRiders,,,,1383.0,2.902,4.84,23:03.000,00:02.902
+12,/user/131274,Jan Deca [яʀ],яʀ,,,,1383.0,2.979,3.93,23:03.000,00:02.979
+13,/user/153961,Wout Hartveld,,,,,1383.1,3.085,4.29,23:03.100,00:03.085
+14,/user/223332,Alex Rockwell,яʀ,,,,1383.3,3.225,4.41,23:03.300,00:03.225
+15,/user/129003,Andrzej Krajewski яʀ,яʀ,RASIO RACING,True,,1383.3,3.251,4.08,23:03.300,00:03.251
+16,/user/140561,Shawn Murtough,,,,,1383.6,3.514,4.16,23:03.600,00:03.514
+17,/user/141761,Alasdair Mcalpine,,GLASGOW UNITED CC,True,,1383.7,3.617,5.05,23:03.700,00:03.617
+18,/user/78811,Christophe Contant[pdl],Pedalers,PEDALERS,True,,1383.8,3.727,5.03,23:03.800,00:03.727
+19,/user/79305,Carlos Cela,,,,,1383.9,3.848,4.33,23:03.900,00:03.848
+20,/user/225394,Ward Simons,,,,,1386.6,6.593,4.79,23:06.600,00:06.593
+21,/user/132783,Mathias  Bergkvist,,,,,1389.0,8.966,4.09,23:09.000,00:08.966
+22,/user/35315,Mike Lister ,DIRT,TRANSATLANTIC RAIDERS,True,,1389.4,9.364,4.14,23:09.400,00:09.364
+23,/user/204947,Tidi Bretti,,,,,1390.4,10.366,3.73,23:10.400,00:10.366
+24,/user/171135,Tomasz Poniatowski,MoonRiders,MOON RIDERS,True,,1390.4,10.384,3.26,23:10.400,00:10.384
+25,/user/134803,Steve Mayes (m),,,,,1390.9,10.861,3.76,23:10.900,00:10.861
+26,/user/5075,Andrew Gajda [d],,,,,1391.0,10.948,4.78,23:11.000,00:10.948
+27,/user/196718,.salmon Salmon,,,,,1395.0,14.993,3.83,23:15.000,00:14.993
+28,/user/150787,Paul Hindson (c),,,,,1412.7,32.657,3.87,23:32.700,00:32.657
+29,/user/137497,Jørgen Vanbers[яʀ],яʀ,RASIO RACING,False,,1423.1,43.089,3.83,23:43.100,00:43.089
+30,/user/112364,Stefan Kruger sanz,,TEAM SANZ,False,,1423.6,43.591,4.19,23:43.600,00:43.591
+31,/user/70138,Andrew Beale c,,WESTERLEY TWO,True,2,1462.0,81.985,3.58,24:22.000,01:21.985
+32,/user/259445,Damir Stazie,,,,,1462.1,82.017,4.04,24:22.100,01:22.017
+33,/user/94149,James Dicks,,,,,1469.9,89.827,4.52,24:29.900,01:29.827
+34,/user/164123,Simon Dubuc,,,,,1478.6,98.55799999999999,4.66,24:38.600,01:38.558
+35,/user/175967,Jens Jessen,GRASSY,,,,1489.8,109.72999999999999,3.71,24:49.800,01:49.730
+36,/user/103369,Kader Allouni,Pocomotion,TEAM POCOMOTION (BLIGHTY),True,,1494.5,114.455,3.76,24:54.500,01:54.455
+37,/user/141031,Kevan Unsworth (m),,TEAM CAMERON,True,,1507.1,127.037,2.76,25:07.100,02:07.037
+38,/user/99114,Thomas Alsop,,,,,1507.4,127.367,3.34,25:07.400,02:07.367
+39,/user/61282,Daniel Neugebauer,Pedalers,PEDALERS,True,,1515.3,135.293,3.82,25:15.300,02:15.293
+40,/user/32313,Alex Pleger [яʀ],яʀ,,,,1521.2,141.108,3.32,25:21.200,02:21.108
+41,/user/167006,Mike Murray,,,,,1522.1,142.071,3.7,25:22.100,02:22.071
+42,/user/6305,Mike Ade otr,,,,,1525.7,145.665,3.43,25:25.700,02:25.665
+43,/user/175441,Tomas Nygren,,,,,1525.9,145.891,2.98,25:25.900,02:25.891
+44,/user/189298,Rob Miller 3r,3R,,,,1525.9,145.893,3.57,25:25.900,02:25.893
+45,/user/261619,Wilger Stoppels,,,,,1526.7,146.639,4.5,25:26.700,02:26.639
+46,/user/86973,David wcc Buckley wcc,,WESTERLEY ONE,True,3,1536.3,156.26,3.24,25:36.300,02:36.260
+47,/user/251861,Jacob Arnell,,,,,1536.3,156.277,3.61,25:36.300,02:36.277
+48,/user/84655,Daniel  Fonseca(cvo),,,,,1538.7,158.61599999999999,3.45,25:38.700,02:38.616
+49,/user/177199,Julian Fussell sdw,SDW,SOUTHBOROUGH (SDW) BEES,True,,1540.7,160.626,3.62,25:40.700,02:40.626
+50,/user/14162,Will Hutchins,WVRT,,,,1542.9,162.813,3.65,25:42.900,02:42.813
+51,/user/243207,Ian Sudds (m),,,,,1550.2,170.112,3.44,25:50.200,02:50.112
+52,/user/139027,Rich Blanchard,,,,,1550.3,170.281,3.45,25:50.300,02:50.281
+53,/user/261269,Martin Jessen,GRASSY,,,,1552.4,172.398,3.24,25:52.400,02:52.398
+54,/user/186271,David Kent (d),,,,,1559.6,179.543,3.4,25:59.600,02:59.543
+55,/user/149819,Peter Kennedy (m),,TEAM CAMERON,True,,1560.4,180.337,3.14,26:00.400,03:00.337
+56,/user/128814,Tim Cummins,,WESTERLEY TWO,True,4,1562.7,182.638,3.29,26:02.700,03:02.638
+57,/user/78574,Stephen Bellio otr,,,,,1562.8,182.741,3.52,26:02.800,03:02.741
+58,/user/42387,William Shiels,,,,,1565.1,185.075,3.02,26:05.100,03:05.075
+59,/user/221746,Tom Yates-ijaz,,WESTERLEY FOUR,True,5,1565.1,185.086,3.43,26:05.100,03:05.086
+60,/user/101319,Martin Wilson,,,,,1630.2,250.194,3.15,27:10.200,04:10.194
+61,/user/192296,Christophe Mathieu,,,,,1630.8,250.712,2.9,27:10.800,04:10.712
+62,/user/51825,Marc Arc fawcett,,,,,1644.9,264.878,3.02,27:24.900,04:24.878
+63,/user/123417,Mike Buckhurst,,,,,1659.7,279.645,3.03,27:39.700,04:39.645
+64,/user/221770,Rafael Nunez,,,,,1682.4,302.358,2.9,28:02.400,05:02.358
+65,/user/158346,Mark Vassalotti,,,,,1697.0,316.99,2.42,28:17.000,05:16.990
+66,/user/43482,Coco Maisie,,,,,1707.7,327.622,2.66,28:27.700,05:27.622
+67,/user/85112,Richard Haig,,,,,1707.7,327.678,2.83,28:27.700,05:27.678
+68,/user/226270,Glen Thurgood,,,,,1832.6,452.504,2.8,30:32.600,07:32.504
+69,/user/203950,Mr Beans,,,,,1837.6,457.525,2.51,30:37.600,07:37.525
