@@ -1,5 +1,6 @@
 import lxml.etree, lxml.html
 import os.path
+import shutil
 import requests
 import csv
 import datetime
@@ -102,12 +103,21 @@ def update_events():
         write_users(users, countries, f'out/{race_no:02n}_{race_id}_users_cumulative.csv')
         write_westerley(users, f'out/{race_no:02n}_{race_id}_westerley_cumulative.csv')
         write_teams(team_points, f'out/{race_no:02n}_{race_id}_teams_cumulative.csv')
-        os.unlink('out/user_results.csv')
-        os.unlink('out/westerley_results.csv')
-        os.unlink('out/team_results.csv')
-        os.symlink(f'{race_no:02n}_{race_id}_users_cumulative.csv', 'out/user_results.csv')
-        os.symlink(f'{race_no:02n}_{race_id}_westerley_cumulative.csv', 'out/westerley_results.csv')
-        os.symlink(f'{race_no:02n}_{race_id}_teams_cumulative.csv', 'out/team_results.csv')
+        try:
+            os.unlink('out/user_results.csv')
+        except:
+            pass
+        try:
+            os.unlink('out/westerley_results.csv')
+        except:
+            pass
+        try:
+            os.unlink('out/team_results.csv')
+        except:
+            pass
+        shutil.copyfile(f'out/{race_no:02n}_{race_id}_users_cumulative.csv', 'out/user_results.csv')
+        shutil.copyfile(f'out/{race_no:02n}_{race_id}_westerley_cumulative.csv', 'out/westerley_results.csv')
+        shutil.copyfile(f'out/{race_no:02n}_{race_id}_teams_cumulative.csv', 'out/team_results.csv')
 
 def write_users(users, countries, fname='out/user_results.csv'):
     csvfile = open(fname, 'w')
