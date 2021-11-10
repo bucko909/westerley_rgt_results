@@ -143,7 +143,7 @@ def write_users(users, countries, fname='out/user_results.csv'):
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(['pos', 'last_pos', 'change', 'url', 'name', 'country', 'points', 'team', 'team points', 'westerley points', 'best', 'race count', 'win count', '2nd count', '3rd count'])
     users = list(users.items())
-    users.sort(key=lambda u: u[1]['points'], reverse=True)
+    users.sort(key=lambda u: sum(u[1]['results']), reverse=True)
     for pos, u in enumerate(users, start=1):
         if 'last_pos' in u[1]:
             last_pos = u[1]['last_pos']
@@ -156,7 +156,7 @@ def write_users(users, countries, fname='out/user_results.csv'):
         else:
             last_pos = ''
             change = '*'
-        csvwriter.writerow([pos, last_pos, change, 'https://rgtdb.com' + u[0], u[1]['name'], countries.get(u[0]), u[1]['points'], u[1]['team'], u[1]['team_points'], u[1]['westerley_points'], u[1]['best'], u[1]['races'], u[1]['golds'], u[1]['silvers'], u[1]['bronzes']])
+        csvwriter.writerow([pos, last_pos, change, 'https://rgtdb.com' + u[0], u[1]['name'], countries.get(u[0]), sum(u[1]['results']), u[1]['team'], u[1]['team_points'], u[1]['westerley_points'], 101 - max(u[1]['results']), len(u[1]['results']), sum(1 for x in u[1]['results'] if x == 100), sum(1 for x in u[1]['results'] if x == 99), sum(1 for x in u[1]['results'] if x == 98)])
         u[1]['last_pos'] = pos
 
 def write_westerley(users, fname='out/westerley_results.csv'):
@@ -168,7 +168,7 @@ def write_westerley(users, fname='out/westerley_results.csv'):
     for pos, u in enumerate(users, start=1):
         if u[1]['westerley_points'] == 0:
             continue
-        csvwriter.writerow([pos, 'https://rgtdb.com' + u[0], u[1]['name'], u[1]['westerley_points'], u[1]['races']])
+        csvwriter.writerow([pos, 'https://rgtdb.com' + u[0], u[1]['name'], u[1]['westerley_points'], len(u[1]['results'])])
 
 def write_teams(teams, fname='out/team_results.csv'):
     csvfile = open(fname, 'w')
@@ -256,23 +256,14 @@ def ingest_row(row, users, team_points):
     if pos:
         if userurl is None:
             raise Exception(lxml.html.tostring(result))
-        users.setdefault(userurl, {'name': username, 'points': 0, 'team_points': 0, 'westerley_points': 0, 'races': 0, 'golds': 0, 'silvers': 0, 'bronzes': 0, 'team': vr_teamname})
+        users.setdefault(userurl, {'name': username, 'team_points': 0, 'westerley_points': 0, 'results': [], 'team': vr_teamname})
         user = users[userurl]
         if user['team'] is None or vr_teamname is None:
             # allow flips between None
             user['team'] = vr_teamname
         assert vr_teamname == user['team'], (vr_teamname, user)
-        user.setdefault('best', pos)
-        user['best'] = min(pos, user['best'])
-        if pos == 1:
-            user['golds'] += 1
-        elif pos == 2:
-            user['silvers'] += 1
-        elif pos == 3:
-            user['bronzes'] += 1
         race_points = max(1, 101 - pos)
-        user['points'] += race_points
-        user['races'] += 1
+        user['results'].append(race_points)
         if team_qualifier:
             team_points.setdefault(vr_teamname, 0)
             team_points[vr_teamname] += race_points
