@@ -25,11 +25,11 @@ def get_teams():
     csvfile = open(f'data/teams.csv', 'r', newline='')
     csvreader = csv.reader(csvfile)
     for row in csvreader:
-        if len(row) > 2:
+        if len(row) > 3:
             extras = []
             after = None
-            for i in range(1, len(row) // 2):
-                start, end = row[i*2:i*2+2]
+            for i in range(1, (len(row)-1) // 2):
+                start, end = row[i*2+1:i*2+3]
                 if end:
                     if not start:
                         start = 1
@@ -42,7 +42,10 @@ def get_teams():
                     after = int(start)
                 else:
                     assert after is None and len(extras) == 0
-        teams[row[0]] = {'name': row[1], 'after': after, 'extras': extras}
+        else:
+            extras = None
+            after = None
+        teams[row[0]] = {'name': row[2], 'after': after, 'extras': extras}
     return teams
 
 def get_westerley():
@@ -118,6 +121,22 @@ def update_events():
         shutil.copyfile(f'out/{race_no:02n}_{race_id}_users_cumulative.csv', 'out/user_results.csv')
         shutil.copyfile(f'out/{race_no:02n}_{race_id}_westerley_cumulative.csv', 'out/westerley_results.csv')
         shutil.copyfile(f'out/{race_no:02n}_{race_id}_teams_cumulative.csv', 'out/team_results.csv')
+    #update_teams(users)
+
+def update_teams(users):
+    csvfile = open(f'data/teams.csv', 'r', newline='')
+    csvreader = csv.reader(csvfile)
+    newrows = []
+    for row in csvreader:
+        if row[0][0] == '/':
+            newrow = [row[0], users.get(row[0], {}).get('name', '')] + row[1:]
+        else:
+            newrow = ['', row[0]] + row[1:]
+        newrows.append(newrow)
+    csvfile = open(f'data/teams_new.csv', 'w')
+    csvwriter = csv.writer(csvfile)
+    for row in newrows:
+        csvwriter.writerow(row)
 
 def write_users(users, countries, fname='out/user_results.csv'):
     csvfile = open(fname, 'w')
@@ -226,9 +245,11 @@ def parse_event(html, teams, westerley, race_no):
         yield (pos, userurl, username, rgt_teamname, vr_teamname, team_qualifier, westerley_pos, time, delta, wkg)
 
 def is_in_range(vr_team, race_no):
-    if len(vr_team['extras']) == 0 and vr_team['after'] is None:
+    if vr_team['extras'] is None and vr_team['after'] is None:
         return True
-    return race_no in vr_team['extras'] or vr_team['after'] is not None and race_no >= vr_team['after']
+    if vr_team['after'] is not None:
+        return race_no >= vr_team['after']
+    return race_no in vr_team['extras']
 
 def ingest_row(row, users, team_points):
     pos, userurl, username, rgt_teamname, vr_teamname, team_qualifier, westerley_pos, time, delta, wkg = row
