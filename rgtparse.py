@@ -141,7 +141,7 @@ def update_teams(users):
 def write_users(users, countries, fname='out/user_results.csv'):
     csvfile = open(fname, 'w')
     csvwriter = csv.writer(csvfile)
-    csvwriter.writerow(['pos', 'last_pos', 'change', 'url', 'name', 'country', 'points', 'team', 'team points', 'westerley points', 'best', 'race count', 'win count', '2nd count', '3rd count'])
+    csvwriter.writerow(['pos', 'last_pos', 'change', 'url', 'name', 'country', 'points', 'best6', 'team', 'team points', 'westerley points', 'best', 'race count', 'win count', '2nd count', '3rd count'])
     users = list(users.items())
     users.sort(key=lambda u: sum(u[1]['results']), reverse=True)
     for pos, u in enumerate(users, start=1):
@@ -156,7 +156,7 @@ def write_users(users, countries, fname='out/user_results.csv'):
         else:
             last_pos = ''
             change = '*'
-        csvwriter.writerow([pos, last_pos, change, 'https://rgtdb.com' + u[0], u[1]['name'], countries.get(u[0]), sum(u[1]['results']), u[1]['team'], u[1]['team_points'], u[1]['westerley_points'], 101 - max(u[1]['results']), len(u[1]['results']), sum(1 for x in u[1]['results'] if x == 100), sum(1 for x in u[1]['results'] if x == 99), sum(1 for x in u[1]['results'] if x == 98)])
+        csvwriter.writerow([pos, last_pos, change, 'https://rgtdb.com' + u[0], u[1]['name'], countries.get(u[0]), sum(u[1]['results']), sum(sorted(u[1]['results'], reverse=True)[:6]), u[1]['team'], u[1]['team_points'], u[1]['westerley_points'], 101 - max(u[1]['results']), len(u[1]['results']), sum(1 for x in u[1]['results'] if x == 100), sum(1 for x in u[1]['results'] if x == 99), sum(1 for x in u[1]['results'] if x == 98)])
         u[1]['last_pos'] = pos
 
 def write_westerley(users, fname='out/westerley_results.csv'):
