@@ -104,6 +104,7 @@ def update_events():
         #    if points != team_points.get(team_name):
         #        print(team_name, points, team_points.get(team_name), team_points.get(team_name,0) - points)
         write_users(users, countries, f'out/{race_no:02n}_{race_id}_users_cumulative.csv')
+        write_users(users, countries, f'out/{race_no:02n}_{race_id}_users_cumulative_best6.csv', best6=True)
         write_westerley(users, f'out/{race_no:02n}_{race_id}_westerley_cumulative.csv')
         write_teams(team_points, f'out/{race_no:02n}_{race_id}_teams_cumulative.csv')
         try:
@@ -119,6 +120,7 @@ def update_events():
         except:
             pass
         shutil.copyfile(f'out/{race_no:02n}_{race_id}_users_cumulative.csv', 'out/user_results.csv')
+        shutil.copyfile(f'out/{race_no:02n}_{race_id}_users_cumulative_best6.csv', 'out/user_results_best6.csv')
         shutil.copyfile(f'out/{race_no:02n}_{race_id}_westerley_cumulative.csv', 'out/westerley_results.csv')
         shutil.copyfile(f'out/{race_no:02n}_{race_id}_teams_cumulative.csv', 'out/team_results.csv')
     #update_teams(users)
@@ -138,18 +140,23 @@ def update_teams(users):
     for row in newrows:
         csvwriter.writerow(row)
 
-def write_users(users, countries, fname='out/user_results.csv'):
+def write_users(users, countries, fname='out/user_results.csv', best6=False):
     csvfile = open(fname, 'w')
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(['pos', 'last_pos', 'change', 'url', 'name', 'country', 'points', 'best6', 'team', 'team points', 'westerley points', 'best', 'race count', 'win count', '2nd count', '3rd count'])
     users = list(users.items())
-    users.sort(key=lambda u: sum(u[1]['results']), reverse=True)
+    if best6:
+        users.sort(key=lambda u: sum(sorted(u[1]['results'], reverse=True)[:6]), reverse=True)
+        last_pos_field = 'last_pos_best6'
+    else:
+        users.sort(key=lambda u: sum(u[1]['results']), reverse=True)
+        last_pos_field = 'last_pos'
     for pos, u in enumerate(users, start=1):
-        if 'last_pos' in u[1]:
-            last_pos = u[1]['last_pos']
-            if u[1]['last_pos'] > pos:
+        if last_pos_field in u[1]:
+            last_pos = u[1][last_pos_field]
+            if u[1][last_pos_field] > pos:
                 change = '▲'
-            elif u[1]['last_pos'] < pos:
+            elif u[1][last_pos_field] < pos:
                 change = '▼'
             else:
                 change = '-'
@@ -157,7 +164,7 @@ def write_users(users, countries, fname='out/user_results.csv'):
             last_pos = ''
             change = '*'
         csvwriter.writerow([pos, last_pos, change, 'https://rgtdb.com' + u[0], u[1]['name'], countries.get(u[0]), sum(u[1]['results']), sum(sorted(u[1]['results'], reverse=True)[:6]), u[1]['team'], u[1]['team_points'], u[1]['westerley_points'], 101 - max(u[1]['results']), len(u[1]['results']), sum(1 for x in u[1]['results'] if x == 100), sum(1 for x in u[1]['results'] if x == 99), sum(1 for x in u[1]['results'] if x == 98)])
-        u[1]['last_pos'] = pos
+        u[1][last_pos_field] = pos
 
 def write_westerley(users, fname='out/westerley_results.csv'):
     csvfile = open(fname, 'w')
