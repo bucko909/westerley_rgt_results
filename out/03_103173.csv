@@ -62,7 +62,7 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs
 61,/user/194499,Kristof Keszthelyi-k,,,,,1209.5,127.837,3.51,20:09.500,02:07.837
 62,/user/155619,Pierre Massé,,,,,1218.0,136.345,3.93,20:18.000,02:16.345
 63,/user/256908,João Pinho (m),,,,,1218.9,137.226,3.38,20:18.900,02:17.226
-64,/user/128814,Tim Cummins,,,,3,1231.9,150.296,3.25,20:31.900,02:30.296
+64,/user/128814,Tim Cummins,,WESTERLEY ONE,True,3,1231.9,150.296,3.25,20:31.900,02:30.296
 65,/user/175441,Tomas Nygren,,,,,1236.5,154.899,2.82,20:36.500,02:34.899
 66,/user/143668,Stu Thorn,,,,,1237.5,155.811,3.41,20:37.500,02:35.811
 67,/user/222863,La A.terrehaute,,,,,1242.3,160.639,3.38,20:42.300,02:40.639
@@ -72,7 +72,7 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs
 71,/user/243217,Arthur Boniver,,,,,1276.7,195.048,4.27,21:16.700,03:15.048
 72,/user/29010,Callum Carruthers,,,,,1280.7,199.076,3.65,21:20.700,03:19.076
 73,/user/236801,Euan Lamont,,,,,1283.0,201.348,3.46,21:23.000,03:21.348
-74,/user/91958,Gt Thakkar,,WESTERLEY ONE,True,4,1288.8,207.189,2.9,21:28.800,03:27.189
+74,/user/91958,Gt Thakkar,,WESTERLEY ONE,False,4,1288.8,207.189,2.9,21:28.800,03:27.189
 75,/user/221770,Rafael Nunez,,,,,1293.7,212.088,3.03,21:33.700,03:32.088
 76,/user/225725,Marek Kruszynski,,,,,1326.2,244.598,2.95,22:06.200,04:04.598
 77,/user/270055,Szymon Koczet,,,,,1341.7,260.093,2.72,22:21.700,04:20.093

@@ -40,7 +40,7 @@ pos,last_pos,change,url,name,country,points,best6,team,team points,westerley poi
 39,32,▼,https://rgtdb.com/user/175441,Tomas Nygren,Sweden,141,141,,0,0,46,3,0,0,0
 40,22,▼,https://rgtdb.com/user/96541,Carl Dickason,New Zealand,139,139,TEAM SANZ,139,0,28,2,0,0,0
 41,25,▼,https://rgtdb.com/user/223310,Flemming Bach (m),,134,134,,0,0,27,2,0,0,0
-42,34,▼,https://rgtdb.com/user/91958,Gt Thakkar,UK,132,132,WESTERLEY ONE,132,55,48,3,0,0,0
+42,34,▼,https://rgtdb.com/user/91958,Gt Thakkar,UK,132,132,WESTERLEY ONE,105,55,48,3,0,0,0
 43,51,▲,https://rgtdb.com/user/86973,David wcc Buckley wcc,UK,127,127,WESTERLEY ONE,86,53,58,3,0,0,0
 44,29,▼,https://rgtdb.com/user/170063,Marco Verhoogt,Netherlands,120,120,,0,0,39,2,0,0,0
 45,61,▲,https://rgtdb.com/user/55374,Andrew Goff,,120,120,MOON RIDERS 2,86,0,54,3,0,0,0
@@ -79,7 +79,7 @@ pos,last_pos,change,url,name,country,points,best6,team,team points,westerley poi
 78,90,▲,https://rgtdb.com/user/72623,Kevin Walker otr,,70,70,,0,0,63,2,0,0,0
 79,91,▲,https://rgtdb.com/user/101319,Martin Wilson,UK,69,69,,0,0,65,2,0,0,0
 80,65,▼,https://rgtdb.com/user/137497,Jørgen Vanbers[яʀ],Netherlands,69,69,RASIO RACING,69,0,32,1,0,0,0
-81,98,▲,https://rgtdb.com/user/128814,Tim Cummins,UK,68,68,,0,32,64,2,0,0,0
+81,98,▲,https://rgtdb.com/user/128814,Tim Cummins,UK,68,68,WESTERLEY ONE,37,32,64,2,0,0,0
 82,,*,https://rgtdb.com/user/270702,Stuart Gillies tcc,,68,68,,0,0,33,1,0,0,0
 83,101,▲,https://rgtdb.com/user/155619,Pierre Massé,France,67,67,,0,0,62,2,0,0,0
 84,66,▼,https://rgtdb.com/user/168564,Marcus Garwood (m),UK,67,67,,0,0,34,1,0,0,0
@@ -139,7 +139,7 @@ pos,last_pos,change,url,name,country,points,best6,team,team points,westerley poi
 138,107,▼,https://rgtdb.com/user/158346,Mark Vassalotti,,24,24,,0,0,77,1,0,0,0
 139,108,▼,https://rgtdb.com/user/270044,Pepelu Pepeluso,,24,24,,0,0,77,1,0,0,0
 140,,*,https://rgtdb.com/user/270055,Szymon Koczet,,24,24,,0,0,77,1,0,0,0
-141,109,▼,https://rgtdb.com/user/241161,Weiran Shen wcc,China,22,22,,0,13,79,1,0,0,0
+141,109,▼,https://rgtdb.com/user/241161,Weiran Shen wcc,China,22,22,WESTERLEY TWO,0,13,79,1,0,0,0
 142,,*,https://rgtdb.com/user/77406,Pj Tcc,,22,22,,0,0,79,1,0,0,0
 143,110,▼,https://rgtdb.com/user/265043,Barry Siddle,,21,21,,0,0,80,1,0,0,0
 144,,*,https://rgtdb.com/user/197430,Ludwig Neumayer,,21,21,,0,0,80,1,0,0,0
