@@ -5,7 +5,7 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs
 4,/user/198726,Mario  Cavelius,,,,,1253.7,0.384,4.01,20:53.700,00:00.384
 5,/user/155757,Jan Linden poco,Pocomotion,,,,1253.7,0.39,4.25,20:53.700,00:00.390
 6,/user/185830,James Currie sdw b,SDW,,,,1253.8,0.442,3.66,20:53.800,00:00.442
-7,/user/134948,Nick Greenhalghяʀ (o),яʀ,RASIO RACING,True,,1254.3,0.924,3.9,20:54.300,00:00.924
+7,/user/134948,Nick Greenhalghяʀ (o),яʀ,RASIO RACING,True,1,1254.3,0.924,3.9,20:54.300,00:00.924
 8,/user/95553,J. Sammut (a),Pocomotion,TEAM POCOMOTION,True,,1254.6,1.303,4.05,20:54.600,00:01.303
 9,/user/132783,Mathias  Bergkvist,,,,,1254.6,1.309,3.94,20:54.600,00:01.309
 10,/user/79305,Carlos Cela,,,,,1254.9,1.558,4.08,20:54.900,00:01.558
@@ -36,7 +36,7 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs
 35,/user/249688,Pat Herron,,,,,1307.3,53.985,4.23,21:47.300,00:53.985
 36,/user/127383,Tom Birch (m),,,,,1307.8,54.477,3.55,21:47.800,00:54.477
 37,/user/126796,Simon Miller sdw,SDWasps,,,,1307.8,54.49,3.74,21:47.800,00:54.490
-38,/user/70138,Andrew Beale c,,WESTERLEY TWO,True,1,1307.8,54.518,3.61,21:47.800,00:54.518
+38,/user/70138,Andrew Beale c,,WESTERLEY TWO,True,2,1307.8,54.518,3.61,21:47.800,00:54.518
 39,/user/20893,Daan Delva,,,,,1307.9,54.556,4.37,21:47.900,00:54.556
 40,/user/267097,Darryl Green - wvs,,,,,1308.1,54.768,3.81,21:48.100,00:54.768
 41,/user/96645,Marcin SzkudlarekṀṚ,ṀṚ,MOON RIDERS 2,True,,1308.2,54.92,3.87,21:48.200,00:54.920
@@ -48,7 +48,7 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs
 47,/user/94149,James Dicks,,,,,1346.8,93.465,4.47,22:26.800,01:33.465
 48,/user/193695,Nico Pflueger,,,,,1360.8,107.52000000000001,3.85,22:40.800,01:47.520
 49,/user/226270,Glen Thurgood,,,,,1362.2,108.87100000000001,3.14,22:42.200,01:48.871
-50,/user/86973,David wcc Buckley wcc,,WESTERLEY ONE,True,2,1362.3,108.997,3.18,22:42.300,01:48.997
+50,/user/86973,David wcc Buckley wcc,,WESTERLEY ONE,True,3,1362.3,108.997,3.18,22:42.300,01:48.997
 51,/user/189383,Richard Howell,,,,,1362.4,109.09100000000001,2.95,22:42.400,01:49.091
 52,/user/55374,Andrew Goff,ṀṚ,MOON RIDERS 2,True,,1362.4,109.098,3.76,22:42.400,01:49.098
 53,/user/274579,Jonathan Frost [tcc],,,,,1362.9,109.61099999999999,4.03,22:42.900,01:49.611
@@ -56,13 +56,13 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs
 55,/user/222863,La A.terrehaute,,,,,1363.5,110.134,3.56,22:43.500,01:50.134
 56,/user/264959,Sebastian Marghella,,,,,1363.5,110.21600000000001,3.59,22:43.500,01:50.216
 57,/user/170063,Marco Verhoogt,,,,,1363.6,110.294,3.78,22:43.600,01:50.294
-58,/user/128814,Tim Cummins,,WESTERLEY ONE,True,3,1388.0,134.67,3.33,23:08.000,02:14.670
+58,/user/128814,Tim Cummins,,WESTERLEY ONE,True,4,1388.0,134.67,3.33,23:08.000,02:14.670
 59,/user/101319,Martin Wilson,,,,,1399.3,145.937,3.33,23:19.300,02:25.937
 60,/user/192296,Christophe Mathieu,,,,,1416.2,162.909,3.11,23:36.200,02:42.909
 61,/user/162796,Cees De jong,,,,,1417.1,163.734,3.32,23:37.100,02:43.734
 62,/user/236801,Euan Lamont,,,,,1417.8,164.445,3.49,23:37.800,02:44.445
 63,/user/164522,Andrew Rimmington,,,,,1419.3,166.002,3.3,23:39.300,02:46.002
-64,/user/91958,Gt Thakkar,,WESTERLEY ONE,False,4,1419.7,166.4,3.14,23:39.700,02:46.400
+64,/user/91958,Gt Thakkar,,WESTERLEY ONE,False,5,1419.7,166.4,3.14,23:39.700,02:46.400
 65,/user/221770,Rafael Nunez,,,,,1460.4,207.049,3.05,24:20.400,03:27.049
 66,/user/51825,Marc Arc fawcett,,,,,1464.4,211.031,3.0,24:24.400,03:31.031
 67,/user/42729,Cameron Lees,,,,,1509.6,256.236,3.61,25:09.600,04:16.236
