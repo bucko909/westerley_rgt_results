@@ -82,7 +82,7 @@ def update_events():
             open(f'cache/{race_id}.html', 'w').write(html)
         results = list(parse_event(html, westerley, race_no))
         team_runners = process_teams(results, teams)
-        write_race_results(results, f'out/{race_no:02n}_{race_id}.csv')
+        write_race_results(results, countries, f'out/{race_no:02n}_{race_id}.csv')
         for row in results:
             ingest_row(row, users, team_points)
         try:
@@ -199,18 +199,19 @@ def write_race_teams(team_results, users, fname):
 def format_human_delta(seconds):
     return (datetime.datetime(2000, 1, 1) + datetime.timedelta(seconds=seconds)).strftime('%M:%S.%f')[:-3]
 
-def write_race_results(results, fname):
+def write_race_results(results, countries, fname):
     csvfile = open(fname, 'w')
     csvwriter = csv.writer(csvfile)
     keys = ['pos', 'userurl', 'name', 'rgt_teamname', 'vr_teamname', 'team_qualifier', 'westerley_pos', 'time_secs', 'delta_secs', 'wkg']
-    csvwriter.writerow(keys + ['time_human', 'delta_human'])
+    csvwriter.writerow(keys + ['country', 'time_human', 'delta_human'])
     for row in results:
         if row['time_secs'] is not None:
             time_human = format_human_delta(row['time_secs'])
             delta_human = format_human_delta(row['delta_secs'])
         else:
             time_human = delta_human = None
-        outrow = [row[key] for key in keys] + [time_human, delta_human]
+        country = countries.get(row['userurl'])
+        outrow = [row[key] for key in keys] + [country, time_human, delta_human]
         csvwriter.writerow(outrow)
 
 def write_users(users, countries, fname='out/user_results.csv', best6=False):
