@@ -1,9 +1,9 @@
 pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs,delta_secs,wkg,time_human,delta_human
 1,/user/160071,Wouter Claes [ṀṚ],ṀṚ,MOON RIDERS 1,True,,1081.6,0.0,4.36,18:01.600,00:00.000
 2,/user/151852,Hans Stuifbergen,,,,,1082.0,0.347,4.52,18:02.000,00:00.347
-3,/user/95553,J. Sammut (a),Pocomotion,TEAM POCOMOTION,True,,1082.0,0.385,4.3,18:02.000,00:00.385
+3,/user/95553,J. Sammut (a),Pocomotion,POCOMOTION,True,,1082.0,0.385,4.3,18:02.000,00:00.385
 4,/user/39166,Ned Bowen [d],[D],,,,1082.1,0.425,4.2,18:02.100,00:00.425
-5,/user/155757,Jan Linden poco,Pocomotion,,,,1082.1,0.488,4.41,18:02.100,00:00.488
+5,/user/155757,Jan Linden poco,Pocomotion,POCOMOTION,True,,1082.1,0.488,4.41,18:02.100,00:00.488
 6,/user/621,Jared Millar b,,,,,1082.2,0.526,4.68,18:02.200,00:00.526
 7,/user/126963,Miles Askew [ṀṚ],ṀṚ,MOON RIDERS 1,True,,1082.2,0.567,4.47,18:02.200,00:00.567
 8,/user/182809,Robert Jenko,Pedalers,,,,1082.5,0.835,4.13,18:02.500,00:00.835
@@ -23,14 +23,14 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs
 22,/user/56133,Peter Austin,OTR team g,,,,1084.4,2.731,4.13,18:04.400,00:02.731
 23,/user/267104,Simon  Hall [wvs],,WATFORD VELO SPORT RT,True,,1085.5,3.826,4.79,18:05.500,00:03.826
 24,/user/61282,Daniel Neugebauer,Pedalers,,,,1086.2,4.548,4.12,18:06.200,00:04.548
-25,/user/267097,Darryl Green - wvs,,,,,1086.5,4.828,4.06,18:06.500,00:04.828
+25,/user/267097,Darryl Green - wvs,,TWICKENHAM CC,True,,1086.5,4.828,4.06,18:06.500,00:04.828
 26,/user/175915,Kristen Ege poco,Pocomotion,,,,1097.0,15.363,3.75,18:17.000,00:15.363
 27,/user/234363,Nicki Haugaard(m),eCKD(D),,,,1097.5,15.85,3.6,18:17.500,00:15.850
-28,/user/177199,Julian Fussell sdw,SDW,,,,1097.8,16.112,4.43,18:17.800,00:16.112
-29,/user/177844,Tom  Moss sdw,SDW,,,,1099.4,17.746,4.17,18:19.400,00:17.746
-30,/user/185830,James Currie sdw b,SDW,,,,1101.4,19.747,3.77,18:21.400,00:19.747
-31,/user/179862,Kester Dobson,,,,,1102.3,20.659,3.79,18:22.300,00:20.659
-32,/user/126796,Simon Miller sdw,SD,,,,1102.9,21.279,4.09,18:22.900,00:21.279
+28,/user/177199,Julian Fussell sdw,SDW,SOUTHBOROUGH (SDW) HORNETS,True,,1097.8,16.112,4.43,18:17.800,00:16.112
+29,/user/177844,Tom  Moss sdw,SDW,SOUTHBOROUGH (SDW) STINGERS,True,,1099.4,17.746,4.17,18:19.400,00:17.746
+30,/user/185830,James Currie sdw b,SDW,SOUTHBOROUGH (SDW) BEES,True,,1101.4,19.747,3.77,18:21.400,00:19.747
+31,/user/179862,Kester Dobson,,SOUTHBOROUGH (SDW) STINGERS,True,,1102.3,20.659,3.79,18:22.300,00:20.659
+32,/user/126796,Simon Miller sdw,SD,SOUTHBOROUGH (SDW) STINGERS,False,,1102.9,21.279,4.09,18:22.900,00:21.279
 33,/user/270702,Stuart Gillies tcc,,,,,1128.6,46.999,3.66,18:48.600,00:46.999
 34,/user/150787,Paul Hindson,,,,,1130.9,49.292,3.94,18:50.900,00:49.292
 35,/user/188139,Per Soderberg(m),OTR team g,,,,1133.6,51.932,3.64,18:53.600,00:51.932
@@ -41,9 +41,9 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs
 40,/user/70138,Andrew Beale c,,WESTERLEY TWO,True,1,1137.6,55.921,3.7,18:57.600,00:55.921
 41,/user/273772,Terrence Harest,,,,,1137.7,56.065,3.78,18:57.700,00:56.065
 42,/user/94149,James Dicks,,,,,1144.3,62.657,4.58,19:04.300,01:02.657
-43,/user/159837,Tim Jen,,,,,1156.4,74.74,4.02,19:16.400,01:14.740
+43,/user/159837,Tim Jen,,RASIO RACING,True,,1156.4,74.74,4.02,19:16.400,01:14.740
 44,/user/7146,Michael Hirmer,,,,,1159.3,77.613,4.45,19:19.300,01:17.613
-45,/user/171135,Tomasz Poniatow. ṀṚ,ṀṚ,,,,1160.8,79.151,3.14,19:20.800,01:19.151
+45,/user/171135,Tomasz Poniatow. ṀṚ,ṀṚ,MOON RIDERS 1,False,,1160.8,79.151,3.14,19:20.800,01:19.151
 46,/user/154714,Graham  Beckett dcc,dcc,,,,1161.7,80.039,3.12,19:21.700,01:20.039
 47,/user/21747,Matthew Feely,,,,,1161.8,80.174,3.54,19:21.800,01:20.174
 48,/user/243207,Ian Sudds (m),,,,,1162.4,80.76599999999999,3.64,19:22.400,01:20.766
@@ -52,13 +52,13 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs
 51,/user/187472,Mike Waterton,,,,,1183.9,102.225,3.61,19:43.900,01:42.225
 52,/user/167072,Matt Brouns,,,,,1184.3,102.64,3.48,19:44.300,01:42.640
 53,/user/232488,Scott  Crichton ,,,,,1187.2,105.531,3.62,19:47.200,01:45.531
-54,/user/55374,Andrew Goff,ṀṚ,MOON RIDERS 2,True,,1195.5,113.887,3.79,19:55.500,01:53.887
+54,/user/55374,Andrew Goff,ṀṚ,SATELITE RIDERS,True,,1195.5,113.887,3.79,19:55.500,01:53.887
 55,/user/92883,T.  Scho,,,,,1206.4,124.729,3.47,20:06.400,02:04.729
 56,/user/186271,David Kent (d),,,,,1206.4,124.748,3.35,20:06.400,02:04.748
 57,/user/63422,Gufo Pino,,,,,1207.0,125.369,5.15,20:07.000,02:05.369
 58,/user/86973,David wcc Buckley wcc,,WESTERLEY ONE,True,2,1207.3,125.653,3.25,20:07.300,02:05.653
 59,/user/249688,Pat Herron,,,,,1207.4,125.797,4.12,20:07.400,02:05.797
-60,/user/96645,Marcin SzkudlarekṀṚ,ṀṚ,MOON RIDERS 2,True,,1208.6,126.91,3.76,20:08.600,02:06.910
+60,/user/96645,Marcin SzkudlarekṀṚ,ṀṚ,SATELITE RIDERS,True,,1208.6,126.91,3.76,20:08.600,02:06.910
 61,/user/194499,Kristof Keszthelyi-k,,,,,1209.5,127.837,3.51,20:09.500,02:07.837
 62,/user/155619,Pierre Massé,,,,,1218.0,136.345,3.93,20:18.000,02:16.345
 63,/user/256908,João Pinho (m),,,,,1218.9,137.226,3.38,20:18.900,02:17.226

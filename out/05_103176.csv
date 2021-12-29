@@ -3,17 +3,17 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs
 2,/user/283422,Scott Gleason ,,,,,1552.1,0.634,4.44,25:52.100,00:00.634
 3,/user/225601,Rasmus  Feldballe(m),eCKD(GP),,,,1553.8,2.347,4.29,25:53.800,00:02.347
 4,/user/160071,Wouter Claes,ṀṚ,MOON RIDERS 1,True,,1558.1,6.691,4.19,25:58.100,00:06.691
-5,/user/95553,J. Sammut (a),Pocomotion,TEAM POCOMOTION,True,,1558.6,7.152,4.03,25:58.600,00:07.152
+5,/user/95553,J. Sammut (a),Pocomotion,POCOMOTION,True,,1558.6,7.152,4.03,25:58.600,00:07.152
 6,/user/621,Jared Millar b,,,,,1566.0,14.581,4.56,26:06.000,00:14.581
 7,/user/79305,Carlos Cela,,,,,1566.4,14.946,4.02,26:06.400,00:14.946
 8,/user/134948,Nick Greenhalghяʀ (o),яʀ,RASIO RACING,True,1,1566.6,15.168,3.91,26:06.600,00:15.168
 9,/user/39166,Ned Bowen,[D],,,,1566.6,15.193,3.97,26:06.600,00:15.193
-10,/user/103369,Kader Allouni poco,Pocomotion,TEAM POCOMOTION,True,,1567.0,15.605,4.06,26:07.000,00:15.605
-11,/user/178108,Greg Barnett(o),SDWasps,,,,1567.3,15.848,3.81,26:07.300,00:15.848
-12,/user/155757,Jan Linden poco,Pocomotion,,,,1567.7,16.27,4.3,26:07.700,00:16.270
+10,/user/103369,Kader Allouni poco,Pocomotion,POCOMOTION,True,,1567.0,15.605,4.06,26:07.000,00:15.605
+11,/user/178108,Greg Barnett(o),SDWasps,SOUTHBOROUGH (SDW) HORNETS,True,,1567.3,15.848,3.81,26:07.300,00:15.848
+12,/user/155757,Jan Linden poco,Pocomotion,POCOMOTION,False,,1567.7,16.27,4.3,26:07.700,00:16.270
 13,/user/132783,Mathias  Bergkvist,,,,,1567.9,16.501,3.89,26:07.900,00:16.501
 14,/user/79121,James Melville,,GLASGOW UNITED CC,True,,1569.0,17.567,4.05,26:09.000,00:17.567
-15,/user/143480,Mark Rowbottom яʀ,яʀ,,,,1572.6,21.213,4.1,26:12.600,00:21.213
+15,/user/143480,Mark Rowbottom яʀ,яʀ,RASIO RACING,True,,1572.6,21.213,4.1,26:12.600,00:21.213
 16,/user/61282,Daniel Neugebauer,Pedalers,,,,1578.2,26.801,4.21,26:18.200,00:26.801
 17,/user/69430,Matthew Hammond (m),,,,,1582.4,31.015,4.17,26:22.400,00:31.015
 18,/user/254894,King Ing.  :-) 3r,3R-TLR,,,,1582.5,31.098,3.93,26:22.500,00:31.098
@@ -21,28 +21,28 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs
 20,/user/229031,Kasper Hededam,eCKD(GP),,,,1605.0,53.607,4.49,26:45.000,00:53.607
 21,/user/141761,Alasdair Mcalpine,,GLASGOW UNITED CC,True,,1605.4,53.994,4.67,26:45.400,00:53.994
 22,/user/198726,Mario  Cavelius,,,,,1605.4,54.003,3.89,26:45.400,00:54.003
-23,/user/185830,James Currie sdw b,SDW,,,,1608.1,56.659,3.52,26:48.100,00:56.659
-24,/user/177844,Tom  Moss sdw,SDW,,,,1608.1,56.71,4.03,26:48.100,00:56.710
+23,/user/185830,James Currie sdw b,SDW,SOUTHBOROUGH (SDW) BEES,True,,1608.1,56.659,3.52,26:48.100,00:56.659
+24,/user/177844,Tom  Moss sdw,SDW,SOUTHBOROUGH (SDW) STINGERS,True,,1608.1,56.71,4.03,26:48.100,00:56.710
 25,/user/267104,Simon  Hall [wvs],,WATFORD VELO SPORT RT,True,,1611.0,59.547,4.64,26:51.000,00:59.547
 26,/user/261662,Rocket Roy nield (c),,,,,1611.6,60.211,4.44,26:51.600,01:00.211
 27,/user/42607,Brian Vince [wvs],,WATFORD VELO SPORT RT,True,,1612.5,61.079,4.3,26:52.500,01:01.079
-28,/user/177199,Julian Fussell sdw,SDW,,,,1613.6,62.184,4.02,26:53.600,01:02.184
+28,/user/177199,Julian Fussell sdw,SDW,SOUTHBOROUGH (SDW) HORNETS,True,,1613.6,62.184,4.02,26:53.600,01:02.184
 29,/user/6305,Mike Ade,OTR Racing,,,,1633.9,82.44800000000001,3.47,27:13.900,01:22.448
 30,/user/234363,Nicki Haugaard ,eCKD,,,,1659.4,107.943,3.37,27:39.400,01:47.943
-31,/user/274579,Jonathan Frost [tcc],,,,,1681.5,130.037,4.17,28:01.500,02:10.037
+31,/user/274579,Jonathan Frost [tcc],,TWICKENHAM CC,True,,1681.5,130.037,4.17,28:01.500,02:10.037
 32,/user/150787,Paul Hindson,,,,,1692.9,141.512,3.71,28:12.900,02:21.512
 33,/user/141031,Kevan Unsworth (m),,TEAM CAMERON,True,,1702.6,151.212,3.0,28:22.600,02:31.212
 34,/user/111327,Ashley Dunstan (b),,,,,1717.7,166.28199999999998,3.31,28:37.700,02:46.282
 35,/user/249688,Pat Herron,,,,,1718.8,167.398,4.03,28:38.800,02:47.398
-36,/user/267097,Darryl Green - wvs,,,,,1719.3,167.86599999999999,3.59,28:39.300,02:47.866
-37,/user/171135,Tomasz Poniatowski [ṀṚ],ṀṚ,,,,1719.3,167.873,2.77,28:39.300,02:47.873
+36,/user/267097,Darryl Green - wvs,,WATFORD VELO SPORT RT,False,,1719.3,167.86599999999999,3.59,28:39.300,02:47.866
+37,/user/171135,Tomasz Poniatowski [ṀṚ],ṀṚ,MOON RIDERS 1,True,,1719.3,167.873,2.77,28:39.300,02:47.873
 38,/user/21747,Matthew Feely,,,,,1719.3,167.887,3.57,28:39.300,02:47.887
 39,/user/70138,Andrew Beale c,,WESTERLEY TWO,True,2,1719.5,168.079,3.24,28:39.500,02:48.079
 40,/user/243207,Ian Sudds (m),,,,,1724.7,173.29,3.57,28:44.700,02:53.290
 41,/user/232488,Scott  Crichton ,,,,,1727.9,176.495,3.36,28:47.900,02:56.495
-42,/user/183281,Chris Duffy bees,SDW,,,,1743.0,191.59,3.1,29:03.000,03:11.590
-43,/user/126796,Simon Miller sdw,SDWasps,,,,1775.3,223.847,3.38,29:35.300,03:43.847
-44,/user/96645,Marcin SzkudlarekṀṚ,ṀṚ,MOON RIDERS 2,True,,1775.5,224.03300000000002,3.53,29:35.500,03:44.033
+42,/user/183281,Chris Duffy bees,SDW,SOUTHBOROUGH (SDW) STINGERS,True,,1743.0,191.59,3.1,29:03.000,03:11.590
+43,/user/126796,Simon Miller sdw,SDWasps,SOUTHBOROUGH (SDW) STINGERS,False,,1775.3,223.847,3.38,29:35.300,03:43.847
+44,/user/96645,Marcin SzkudlarekṀṚ,ṀṚ,SATELITE RIDERS,True,,1775.5,224.03300000000002,3.53,29:35.500,03:44.033
 45,/user/127383,Tom Birch (m),,,,,1775.8,224.4,3.24,29:35.800,03:44.400
 46,/user/170063,Marco Verhoogt (b),,,,,1778.4,226.937,3.53,29:38.400,03:46.937
 47,/user/239015,Jesper Hvisthule,,,,,1790.8,239.397,3.8,29:50.800,03:59.397
@@ -63,10 +63,10 @@ pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,time_secs
 62,/user/277365,Alistair Dow e,,,,,1906.0,354.54,3.19,31:46.000,05:54.540
 63,/user/157110,John Gymer,,,,,1939.4,387.966,2.87,32:19.400,06:27.966
 64,/user/123417,Mike Buckhurst,,,,,1955.0,403.62,2.98,32:35.000,06:43.620
-65,/user/278058,Claire  Miller,,,,,1959.7,408.269,3.42,32:39.700,06:48.269
+65,/user/278058,Claire  Miller,,TWICKENHAM CC LADIES,True,,1959.7,408.269,3.42,32:39.700,06:48.269
 66,/user/263153,Karen  Bailey (l),,,,,1966.9,415.475,3.12,32:46.900,06:55.475
 67,/user/208907,David Symonds (m),,,,,2009.6,458.166,2.71,33:29.600,07:38.166
 68,/user/166447,Dermot Doyle (f),,,,,2035.2,483.733,2.99,33:55.200,08:03.733
 69,/user/66324,Gavin Grant tcc,,TWICKENHAM CC,True,,2155.6,604.169,2.19,35:55.600,10:04.169
-70,/user/283647,Claire Thompson,,,,,2642.1,1090.629,2.13,44:02.100,18:10.629
+70,/user/283647,Claire Thompson,,TWICKENHAM CC LADIES,True,,2642.1,1090.629,2.13,44:02.100,18:10.629
 71,/user/140561,Shawn Murtough,3R,,,,2809.4,1257.975,2.25,46:49.400,20:57.975
