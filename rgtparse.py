@@ -101,6 +101,7 @@ def update_events():
         write_users(users, countries, f'out/{race_no:02n}_{race_id}_users_cumulative_best6.csv', best6=True)
         write_westerley(users, f'out/{race_no:02n}_{race_id}_westerley_cumulative.csv')
         write_teams(team_points, f'out/{race_no:02n}_{race_id}_teams_cumulative.csv')
+        check_teams(team_points, f'data/official_team_results_after_{race_no}.csv')
         try:
             os.unlink('out/user_results.csv')
         except:
@@ -118,6 +119,35 @@ def update_events():
         shutil.copyfile(f'out/{race_no:02n}_{race_id}_westerley_cumulative.csv', 'out/westerley_results.csv')
         shutil.copyfile(f'out/{race_no:02n}_{race_id}_teams_cumulative.csv', 'out/team_results.csv')
     #update_teams(users)
+
+TEAM_ALIASES = {
+    'MOON RIDERS 2': 'SATELITE RIDERS',
+    'TWICKENHAM CC 1': 'TWICKENHAM CC',
+    'TWICKENHAM CC 2': 'TWICKENHAM CC LADIES',
+}
+def check_teams(team_points, official_fname):
+    try:
+        csvfile = open(official_fname, 'r', newline='')
+    except:
+        print(f"Couldn't open team results file {official_fname}")
+        return
+    csvreader = csv.reader(csvfile)
+    seen = set()
+    for team_name, official_points_str in csvreader:
+        official_points = int(official_points_str)
+        team_name = TEAM_ALIASES.get(team_name, team_name)
+        seen.add(team_name)
+        if team_name not in team_points:
+            print(f"NOCOMP: Team {team_name} in {official_fname} but not in computed results")
+            continue
+        computed_points = team_points[team_name]
+        delta = computed_points - official_points
+        if delta != 0:
+            print(f"BADCOMP: Team {team_name} has {official_points} in {official_fname} but computed {computed_points} (delta={delta}).")
+    for team_name in team_points:
+        if team_name not in seen:
+            print(f"NOOFF: Team {team_name} has computed results but is not in {official_fname}.")
+
 
 def update_teams(users):
     csvfile = open(f'data/teams.csv', 'r', newline='')

@@ -8,10 +8,10 @@
 /user/97249,Ian Mcnally,WESTERLEY TWO
 /user/160071,Wouter Claes,MOON RIDERS 1
 /user/126963,Miles Askew,MOON RIDERS 1
-/user/96645,Marcin Szkudlarek,MOON RIDERS 2
-/user/159472,Daniel Schoch [ṀṚ],MOON RIDERS 2
-/user/55374,Andrew Goff,MOON RIDERS 2
-/user/171135,Tomasz (m) Poniatowski,MOON RIDERS,,0
+/user/171135,Tomasz Poniatowski [ṀṚ],MOON RIDERS 1
+/user/96645,Marcin Szkudlarek,SATELITE RIDERS
+/user/159472,Daniel Schoch [ṀṚ],SATELITE RIDERS
+/user/55374,Andrew Goff,SATELITE RIDERS
 /user/36792,Francois Iker,MOON RIDERS,,0
 #/user/178580,Timo Achenbach,MOON RIDERS,,0
 #/user/175226,Ross Collins,MOON RIDERS,,0
@@ -19,7 +19,8 @@
 /user/131274,Jan Deca [яʀ],RASIO RACING
 /user/134948,Nick Greenhalghяʀ,RASIO RACING
 /user/137497,Jørgen Vanbers[яʀ]a,RASIO RACING
-/user/143480,Mark Rowbottom яʀ,RASIO RACING,,0
+/user/159837,Tim Jen,RASIO RACING,3,
+/user/143480,Mark Rowbottom яʀ,RASIO RACING,4,
 /user/129003,Andrzej Krajewski яʀ,RASIO RACING,,0
 /user/62325,Ben Phillips[яʀ],RASIO RACING,,0
 /user/191184,Rob Burdon sdw,SOUTHBOROUGH (SDW),,0
@@ -42,15 +43,17 @@
 /user/79121,James Melville,GLASGOW UNITED CC
 /user/141761,Alasdair Mcalpine,GLASGOW UNITED CC
 /user/108193,Stevie Couper,GLASGOW UNITED CC,,0
-/user/95553,J. Sammut (a),TEAM POCOMOTION
-/user/103369,Kader Allouni,TEAM POCOMOTION
-/user/175915,Kristen Ege poco,TEAM POCOMOTION,0
-/user/155757,Jan Linden poco,TEAM POCOMOTION,0
-#/user/165638,Mads Schnoor,TEAM POCOMOTION,,0
-/user/42607,Brian Vince [wvs],WATFORD VELO SPORT RT
+/user/95553,J. Sammut (a),POCOMOTION
+/user/103369,Kader Allouni,POCOMOTION
+/user/175915,Kristen Ege poco,POCOMOTION,,0
+/user/155757,Jan Linden poco,POCOMOTION
+#/user/165638,Mads Schnoor,POCOMOTION,,0
+/user/42607,Brian Vince [wvs],WATFORD VELO SPORT RT,,4
 /user/267104,Simon Hall,WATFORD VELO SPORT RT
 /user/270710,Jack Samways[wvs],WATFORD VELO SPORT RT
-/user/267097,Darryl Green - wvs,WATFORD VELO SPORT RT,,0
+/user/267097,Darryl Green - wvs,WATFORD VELO SPORT RT,4,
 /user/14162,Will Hutchins,WATFORD VELO SPORT RT,,0
-/user/95813,Lisa West tcc,TWICKENHAM CC,2,
+/user/95813,Lisa West tcc,TWICKENHAM CC,2,3
 /user/66324,Gavin Grant,TWICKENHAM CC,2,
+/user/95813,Lisa West tcc,TWICKENHAM CC LADIES,4,
+#/user/267097,Darryl Green - wvs,TWICKENHAM CC,3,3 ??????????
