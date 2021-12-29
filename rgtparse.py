@@ -25,6 +25,8 @@ def get_teams(race_no):
     csvfile = open(f'data/teams.csv', 'r', newline='')
     csvreader = csv.reader(csvfile)
     for row in csvreader:
+        if len(row) == 0:
+            continue
         if row[0].startswith('#'):
             continue
         if len(row) > 3:
@@ -78,13 +80,11 @@ def update_events():
                 import pdb; pdb.set_trace()
             html = response.text
             open(f'cache/{race_id}.html', 'w').write(html)
-        csvfile = open(f'out/{race_no:02n}_{race_id}.csv', 'w')
-        csvwriter = csv.writer(csvfile)
-        csvwriter.writerow(['pos', 'userurl', 'name', 'rgt_teamname', 'vr_teamname', 'team_qualifier', 'westerley_pos', 'time_secs', 'delta_secs', 'wkg', 'time_human', 'delta_human'])
-        for row in parse_event(html, teams, westerley, race_no):
-            csvwriter.writerow(row + tuple(map(lambda x: (datetime.datetime(2000, 1, 1) + datetime.timedelta(seconds=x)).strftime('%M:%S.%f')[:-3] if x is not None else None, row[7:9])))
+        results = list(parse_event(html, westerley, race_no))
+        team_runners = process_teams(results, teams)
+        write_race_results(results, f'out/{race_no:02n}_{race_id}.csv')
+        for row in results:
             ingest_row(row, users, team_points)
-            vr_teamname, team_qualifier = row[4:6]
         try:
             check_csv = csv.reader(open(f'data/team_after_{race_no}.csv', 'r'))
         except FileNotFoundError:
@@ -100,6 +100,7 @@ def update_events():
         write_users(users, countries, f'out/{race_no:02n}_{race_id}_users_cumulative.csv')
         write_users(users, countries, f'out/{race_no:02n}_{race_id}_users_cumulative_best6.csv', best6=True)
         write_westerley(users, f'out/{race_no:02n}_{race_id}_westerley_cumulative.csv')
+        write_race_teams(team_runners, users, f'out/{race_no:02n}_{race_id}_teams.csv')
         write_teams(team_points, f'out/{race_no:02n}_{race_id}_teams_cumulative.csv')
         check_teams(team_points, f'data/official_team_results_after_{race_no}.csv')
         try:
@@ -137,10 +138,11 @@ def check_teams(team_points, official_fname):
         official_points = int(official_points_str)
         team_name = TEAM_ALIASES.get(team_name, team_name)
         seen.add(team_name)
-        if team_name not in team_points:
+        computed_points = team_points.get(team_name)
+        team_points[team_name] = official_points
+        if computed_points is None:
             print(f"NOCOMP: Team {team_name} in {official_fname} but not in computed results")
             continue
-        computed_points = team_points[team_name]
         delta = computed_points - official_points
         if delta != 0:
             print(f"BADCOMP: Team {team_name} has {official_points} in {official_fname} but computed {computed_points} (delta={delta}).")
@@ -164,6 +166,53 @@ def update_teams(users):
     for row in newrows:
         csvwriter.writerow(row)
 
+def process_teams(race_results, teams):
+    team_results = dict()
+    for row in race_results:
+        row['vr_teamname'] = teams.get(row['userurl'])
+        if row['vr_teamname'] is not None:
+            this_team_results = team_results.setdefault(row['vr_teamname'], {'name': row['vr_teamname'], 'runners': [], 'points': 0})
+            this_team_results['runners'].append(row['userurl'])
+            if len(this_team_results['runners']) <= 2 and row['pos'] is not None:
+                row['team_qualifier'] = True
+                this_team_results['points'] += 101 - row['pos']
+            else:
+                row['team_qualifier'] = False
+        else:
+            row['team_qualifier'] = None
+    return team_results
+
+def write_race_teams(team_results, users, fname):
+    csvwriter = csv.writer(open(fname, 'w'))
+    csvwriter.writerow(['name', 'points', 'first', 'second', 'third', 'fourth', 'extras(!)'])
+    team_results = list(team_results.values())
+    team_results.sort(key=lambda x: -x['points'])
+    for team in team_results:
+        row = [team['name'], team['points']]
+        runners = [users[url]['name'] for url in team['runners']]
+        while len(runners) < 4:
+            runners.append(None)
+        row.extend(runners[:4])
+        row.append(','.join(runners[4:]))
+        csvwriter.writerow(row)
+
+def format_human_delta(seconds):
+    return (datetime.datetime(2000, 1, 1) + datetime.timedelta(seconds=seconds)).strftime('%M:%S.%f')[:-3]
+
+def write_race_results(results, fname):
+    csvfile = open(fname, 'w')
+    csvwriter = csv.writer(csvfile)
+    keys = ['pos', 'userurl', 'name', 'rgt_teamname', 'vr_teamname', 'team_qualifier', 'westerley_pos', 'time_secs', 'delta_secs', 'wkg']
+    csvwriter.writerow(keys + ['time_human', 'delta_human'])
+    for row in results:
+        if row['time_secs'] is not None:
+            time_human = format_human_delta(row['time_secs'])
+            delta_human = format_human_delta(row['delta_secs'])
+        else:
+            time_human = delta_human = None
+        outrow = [row[key] for key in keys] + [time_human, delta_human]
+        csvwriter.writerow(outrow)
+
 def write_users(users, countries, fname='out/user_results.csv', best6=False):
     csvfile = open(fname, 'w')
     csvwriter = csv.writer(csvfile)
@@ -176,6 +225,8 @@ def write_users(users, countries, fname='out/user_results.csv', best6=False):
         users.sort(key=lambda u: sum(u[1]['results']), reverse=True)
         last_pos_field = 'last_pos'
     for pos, u in enumerate(users, start=1):
+        if len(u[1]['results']) == 0:
+            continue
         if last_pos_field in u[1]:
             last_pos = u[1][last_pos_field]
             if u[1][last_pos_field] > pos:
@@ -210,89 +261,77 @@ def write_teams(team_points, fname='out/team_results.csv'):
     for pos, t in enumerate(team_points, start=1):
         csvwriter.writerow([pos, t[0], t[1]])
 
-def parse_event(html, teams, westerley, race_no):
+def parse_event(html, westerley, race_no):
     data = lxml.etree.HTML(html)
-    vr_team_runners = dict()
     westerley_seen = set()
     for result in data.xpath('/html/body/div/main/div/div/div[@id="results"]/table/tbody/tr'):
+        row = {}
         postd, _trophytd, userdatatd, timetd, wkgtd, _rankchangetd = result.xpath('td')
         dnfspan = postd.xpath('span')
         if dnfspan:
             if postd.xpath('span/text()') != ['DNF']:
                 raise Exception(lxml.html.tostring(postd))
-            pos = None
+            row['pos'] = None
         else:
             post, = postd.xpath('text()')
-            pos = int(post.strip())
+            row['pos'] = int(post.strip())
         userlinks = userdatatd.xpath('span/a')
         if userlinks:
             userlink, = userlinks
-            userurl = userlink.attrib['href']
-            username, = userlink.xpath('text()')
+            row['userurl'] = userlink.attrib['href']
+            row['name'], = userlink.xpath('text()')
         else:
-            userurl = None
+            row['userurl'] = None
             usernamebits = [x.strip() for x in userdatatd.xpath('span/text()')]
             if usernamebits[0] != '':
                 raise Exception(lxml.html.tostring(userdatatd))
-            username, = usernamebits[1:]
+            row['name'], = usernamebits[1:]
+        if row['pos'] is not None and row['userurl'] is None:
+            raise Exception(lxml.html.tostring(result))
         teamnamespans = userdatatd.xpath('a/span')
         if teamnamespans:
             teamnamespan, = teamnamespans
-            rgt_teamname = teamnamespan.text.strip()
+            row['rgt_teamname'] = teamnamespan.text.strip()
         else:
-            rgt_teamname = None
-        if pos is not None:
+            row['rgt_teamname'] = None
+        if row['pos'] is not None:
             timet, _blank = timetd.xpath('text()')
-            time = parse_time(timet.strip())
+            row['time_secs'] = parse_time(timet.strip())
             deltats = timetd.xpath('em/text()')
             if deltats:
                 deltat, = deltats
-                delta = parse_time(deltat.strip())
+                row['delta_secs'] = parse_time(deltat.strip())
             else:
-                delta = 0.0
+                row['delta_secs'] = 0.0
             wkgt, = wkgtd.xpath('text()')
-            wkg = float(wkgt.strip())
+            row['wkg'] = float(wkgt.strip())
         else:
-            time = None
-            delta = None
-            wkg = None
-        vr_teamname = teams.get(userurl)
-        if vr_teamname is not None:
-            vr_team_finishers = vr_team_runners.setdefault(vr_teamname, [])
-            vr_team_finishers.append(userurl)
-            if len(vr_team_finishers) <= 2:
-                team_qualifier = True
-            else:
-                team_qualifier = False
+            row['time_secs'] = None
+            row['delta_secs'] = None
+            row['wkg'] = None
+        if westerley.get(row['userurl'], float('inf')) <= race_no:
+            westerley_seen.add(row['userurl'])
+            row['westerley_pos'] = len(westerley_seen)
         else:
-            vr_teamname = None
-            team_qualifier = None
-        if westerley.get(userurl, float('inf')) <= race_no:
-            westerley_seen.add(userurl)
-            westerley_pos = len(westerley_seen)
-        else:
-            westerley_pos = None
-        yield (pos, userurl, username, rgt_teamname, vr_teamname, team_qualifier, westerley_pos, time, delta, wkg)
+            row['westerley_pos'] = None
+        yield row
 
 def ingest_row(row, users, team_points):
-    pos, userurl, username, rgt_teamname, vr_teamname, team_qualifier, westerley_pos, time, delta, wkg = row
-    if pos:
-        if userurl is None:
-            raise Exception(lxml.html.tostring(result))
-        users.setdefault(userurl, {'name': username, 'team_points': 0, 'westerley_points': 0, 'results': [], 'team': vr_teamname})
-        user = users[userurl]
-        if user['team'] != vr_teamname and vr_teamname is not None:
+    users.setdefault(row['userurl'], {'name': row['name'], 'team_points': 0, 'westerley_points': 0, 'results': [], 'team': row['vr_teamname']})
+    if row['pos']:
+        user = users[row['userurl']]
+        if user['team'] != row['vr_teamname'] and row['vr_teamname'] is not None:
             if user['team'] is not None:
-                print(f"TEAMCHANGE: {userurl} changes to team {vr_teamname}")
-            user['team'] = vr_teamname
-        race_points = max(1, 101 - pos)
+                print(f"TEAMCHANGE: {row['userurl']} changes to team {row['vr_teamname']}")
+            user['team'] = row['vr_teamname']
+        race_points = max(1, 101 - row['pos'])
         user['results'].append(race_points)
-        if team_qualifier:
-            team_points.setdefault(vr_teamname, 0)
-            team_points[vr_teamname] += race_points
+        if row['team_qualifier']:
+            team_points.setdefault(row['vr_teamname'], 0)
+            team_points[row['vr_teamname']] += race_points
             user['team_points'] += race_points
-        if westerley_pos is not None:
-            user['westerley_points'] += max(1, 21 - westerley_pos)
+        if row['westerley_pos'] is not None:
+            user['westerley_points'] += max(1, 21 - row['westerley_pos'])
 
 if __name__ == '__main__':
     update_events()
