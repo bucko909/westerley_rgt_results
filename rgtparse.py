@@ -222,9 +222,15 @@ def write_users(users, countries, fname='out/user_results.csv', best6=False):
         users.sort(key=lambda u: sum(sorted(u[1]['results'], reverse=True)[:6]), reverse=True)
         last_pos_field = 'last_pos_best6'
     else:
-        users.sort(key=lambda u: sum(u[1]['results']), reverse=True)
+        users.sort(key=lambda u: (sum(u[1]['results']), u[1]['name']), reverse=True)
         last_pos_field = 'last_pos'
+    old_total = old_pos = None
     for pos, u in enumerate(users, start=1):
+        total = sum(u[1]['results'])
+        if total == old_total:
+            pos = old_pos
+        old_total = total
+        old_pos = pos
         if len(u[1]['results']) == 0:
             continue
         if last_pos_field in u[1]:
