@@ -20,32 +20,26 @@ def get_events():
     for row in csvreader:
         yield row[0]
 
-def get_teams():
+def get_teams(race_no):
     teams = {}
     csvfile = open(f'data/teams.csv', 'r', newline='')
     csvreader = csv.reader(csvfile)
     for row in csvreader:
+        if row[0].startswith('#'):
+            continue
         if len(row) > 3:
-            extras = []
-            after = None
+            allowed = False
             for i in range(1, (len(row)-1) // 2):
                 start, end = row[i*2+1:i*2+3]
-                if end:
-                    if not start:
-                        start = 1
-                    else:
-                        start = int(start)
-                    end = int(end)
-                    extras.extend(range(start, end+1))
-                elif start:
-                    assert after is None
-                    after = int(start)
-                else:
-                    assert after is None and len(extras) == 0
+                if end and int(end) < race_no:
+                    continue
+                elif start and int(start) > race_no:
+                    continue
+                allowed = True
         else:
-            extras = None
-            after = None
-        teams[row[0]] = {'name': row[2], 'after': after, 'extras': extras}
+            allowed = True
+        if allowed:
+            teams[row[0]] = row[2]
     return teams
 
 def get_westerley():
@@ -67,7 +61,6 @@ def get_countries():
 
 def update_events():
     users = {}
-    teams = get_teams()
     westerley = get_westerley()
     countries = get_countries()
     team_points = {}
@@ -76,6 +69,7 @@ def update_events():
     if not os.path.exists('cache'):
         os.mkdir('cache')
     for race_no, race_id in enumerate(get_events(), start=1):
+        teams = get_teams(race_no)
         if os.path.exists(f'cache/{race_id}.html'):
             html = open(f'cache/{race_id}.html','r').read()
         else:
@@ -177,13 +171,13 @@ def write_westerley(users, fname='out/westerley_results.csv'):
             continue
         csvwriter.writerow([pos, 'https://rgtdb.com' + u[0], u[1]['name'], u[1]['westerley_points'], len(u[1]['results'])])
 
-def write_teams(teams, fname='out/team_results.csv'):
+def write_teams(team_points, fname='out/team_results.csv'):
     csvfile = open(fname, 'w')
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(['pos', 'name', 'points'])
-    teams = list(teams.items())
-    teams.sort(key=lambda t: t[1], reverse=True)
-    for pos, t in enumerate(teams, start=1):
+    team_points = list(team_points.items())
+    team_points.sort(key=lambda t: t[1], reverse=True)
+    for pos, t in enumerate(team_points, start=1):
         csvwriter.writerow([pos, t[0], t[1]])
 
 def parse_event(html, teams, westerley, race_no):
@@ -232,9 +226,8 @@ def parse_event(html, teams, westerley, race_no):
             time = None
             delta = None
             wkg = None
-        vr_team = teams.get(userurl)
-        if vr_team is not None and is_in_range(vr_team, race_no):
-            vr_teamname = vr_team['name']
+        vr_teamname = teams.get(userurl)
+        if vr_teamname is not None:
             vr_team_finishers = vr_team_runners.setdefault(vr_teamname, [])
             vr_team_finishers.append(userurl)
             if len(vr_team_finishers) <= 2:
@@ -251,13 +244,6 @@ def parse_event(html, teams, westerley, race_no):
             westerley_pos = None
         yield (pos, userurl, username, rgt_teamname, vr_teamname, team_qualifier, westerley_pos, time, delta, wkg)
 
-def is_in_range(vr_team, race_no):
-    if vr_team['extras'] is None and vr_team['after'] is None:
-        return True
-    if vr_team['after'] is not None:
-        return race_no >= vr_team['after']
-    return race_no in vr_team['extras']
-
 def ingest_row(row, users, team_points):
     pos, userurl, username, rgt_teamname, vr_teamname, team_qualifier, westerley_pos, time, delta, wkg = row
     if pos:
@@ -265,10 +251,10 @@ def ingest_row(row, users, team_points):
             raise Exception(lxml.html.tostring(result))
         users.setdefault(userurl, {'name': username, 'team_points': 0, 'westerley_points': 0, 'results': [], 'team': vr_teamname})
         user = users[userurl]
-        if user['team'] is None or vr_teamname is None:
-            # allow flips between None
+        if user['team'] != vr_teamname and vr_teamname is not None:
+            if user['team'] is not None:
+                print(f"TEAMCHANGE: {userurl} changes to team {vr_teamname}")
             user['team'] = vr_teamname
-        assert vr_teamname == user['team'], (vr_teamname, user)
         race_points = max(1, 101 - pos)
         user['results'].append(race_points)
         if team_qualifier:
