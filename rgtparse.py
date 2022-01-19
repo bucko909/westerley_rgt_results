@@ -20,6 +20,14 @@ def get_events():
     for row in csvreader:
         yield row[0]
 
+def get_ladies():
+    csvfile = open(f'data/ladies.csv', 'r', newline='')
+    csvreader = csv.reader(csvfile)
+    ladies = set()
+    for url, name in csvreader:
+        ladies.add(url)
+    return ladies
+
 def get_teams(race_no):
     teams = {}
     csvfile = open(f'data/teams.csv', 'r', newline='')
@@ -65,6 +73,7 @@ def update_events():
     users = {}
     westerley = get_westerley()
     countries = get_countries()
+    ladies = get_ladies()
     team_points = {}
     if not os.path.exists('out'):
         os.mkdir('out')
@@ -80,7 +89,7 @@ def update_events():
                 import pdb; pdb.set_trace()
             html = response.text
             open(f'cache/{race_id}.html', 'w').write(html)
-        results = list(parse_event(html, westerley, race_no))
+        results = list(parse_event(html, westerley, ladies, race_no))
         team_runners = process_teams(results, teams)
         write_race_results(results, countries, f'out/{race_no:02n}_{race_id}.csv')
         for row in results:
@@ -97,8 +106,10 @@ def update_events():
         #    team_name = aliases.get(team_name, team_name)
         #    if points != team_points.get(team_name):
         #        print(team_name, points, team_points.get(team_name), team_points.get(team_name,0) - points)
-        write_users(users, countries, f'out/{race_no:02n}_{race_id}_users_cumulative.csv')
-        write_users(users, countries, f'out/{race_no:02n}_{race_id}_users_cumulative_best6.csv', best6=True)
+        write_users(users, countries, f'out/{race_no:02n}_{race_id}_all_cumulative.csv')
+        write_users(users, countries, f'out/{race_no:02n}_{race_id}_all_cumulative_best6.csv', best6=True)
+        write_users(users, countries, f'out/{race_no:02n}_{race_id}_ladies_cumulative.csv', ladies=True)
+        write_users(users, countries, f'out/{race_no:02n}_{race_id}_ladies_cumulative_best6.csv', best6=True, ladies=True)
         write_westerley(users, f'out/{race_no:02n}_{race_id}_westerley_cumulative.csv')
         write_race_teams(team_runners, users, f'out/{race_no:02n}_{race_id}_teams.csv')
         write_teams(team_points, f'out/{race_no:02n}_{race_id}_teams_cumulative.csv')
@@ -115,8 +126,10 @@ def update_events():
             os.unlink('out/team_results.csv')
         except:
             pass
-        shutil.copyfile(f'out/{race_no:02n}_{race_id}_users_cumulative.csv', 'out/user_results.csv')
-        shutil.copyfile(f'out/{race_no:02n}_{race_id}_users_cumulative_best6.csv', 'out/user_results_best6.csv')
+        shutil.copyfile(f'out/{race_no:02n}_{race_id}_all_cumulative.csv', 'out/all_results.csv')
+        shutil.copyfile(f'out/{race_no:02n}_{race_id}_all_cumulative_best6.csv', 'out/all_results_best6.csv')
+        shutil.copyfile(f'out/{race_no:02n}_{race_id}_ladies_cumulative.csv', 'out/ladies_results.csv')
+        shutil.copyfile(f'out/{race_no:02n}_{race_id}_ladies_cumulative_best6.csv', 'out/ladies_results_best6.csv')
         shutil.copyfile(f'out/{race_no:02n}_{race_id}_westerley_cumulative.csv', 'out/westerley_results.csv')
         shutil.copyfile(f'out/{race_no:02n}_{race_id}_teams_cumulative.csv', 'out/team_results.csv')
     #update_teams(users)
@@ -202,7 +215,7 @@ def format_human_delta(seconds):
 def write_race_results(results, countries, fname):
     csvfile = open(fname, 'w')
     csvwriter = csv.writer(csvfile)
-    keys = ['pos', 'userurl', 'name', 'rgt_teamname', 'vr_teamname', 'team_qualifier', 'westerley_pos', 'time_secs', 'delta_secs', 'wkg']
+    keys = ['pos', 'userurl', 'name', 'rgt_teamname', 'vr_teamname', 'team_qualifier', 'westerley_pos', 'ladies_points', 'time_secs', 'delta_secs', 'wkg']
     csvwriter.writerow(keys + ['country', 'time_human', 'delta_human'])
     for row in results:
         if row['time_secs'] is not None:
@@ -214,25 +227,30 @@ def write_race_results(results, countries, fname):
         outrow = [row[key] for key in keys] + [country, time_human, delta_human]
         csvwriter.writerow(outrow)
 
-def write_users(users, countries, fname='out/user_results.csv', best6=False):
+def write_users(users, countries, fname='out/user_results.csv', best6=False, ladies=False):
     csvfile = open(fname, 'w')
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(['pos', 'last_pos', 'change', 'url', 'name', 'country', 'points', 'best6', 'team', 'team points', 'westerley points', 'best', 'race count', 'win count', '2nd count', '3rd count'])
     users = list(users.items())
+    last_pos_field = 'last_pos'
+    results_field = 'results'
+    if ladies:
+        results_field += '_ladies'
+        last_pos_field += '_ladies'
+    users = [user for user in users if user[1][results_field]]
     if best6:
-        users.sort(key=lambda u: sum(sorted(u[1]['results'], reverse=True)[:6]), reverse=True)
-        last_pos_field = 'last_pos_best6'
+        users.sort(key=lambda u: sum(sorted(u[1][results_field], reverse=True)[:6]), reverse=True)
+        last_pos_field += '_best6'
     else:
-        users.sort(key=lambda u: (sum(u[1]['results']), u[1]['name']), reverse=True)
-        last_pos_field = 'last_pos'
+        users.sort(key=lambda u: (sum(u[1][results_field]), u[1]['name']), reverse=True)
     old_total = old_pos = None
     for pos, u in enumerate(users, start=1):
-        total = sum(u[1]['results'])
+        total = sum(u[1][results_field])
         if total == old_total:
             pos = old_pos
         old_total = total
         old_pos = pos
-        if len(u[1]['results']) == 0:
+        if len(u[1][results_field]) == 0:
             continue
         if last_pos_field in u[1]:
             last_pos = u[1][last_pos_field]
@@ -245,7 +263,7 @@ def write_users(users, countries, fname='out/user_results.csv', best6=False):
         else:
             last_pos = ''
             change = '*'
-        csvwriter.writerow([pos, last_pos, change, 'https://rgtdb.com' + u[0], u[1]['name'], countries.get(u[0]), sum(u[1]['results']), sum(sorted(u[1]['results'], reverse=True)[:6]), u[1]['team'], u[1]['team_points'], u[1]['westerley_points'], 101 - max(u[1]['results']), len(u[1]['results']), sum(1 for x in u[1]['results'] if x == 100), sum(1 for x in u[1]['results'] if x == 99), sum(1 for x in u[1]['results'] if x == 98)])
+        csvwriter.writerow([pos, last_pos, change, 'https://rgtdb.com' + u[0], u[1]['name'], countries.get(u[0]), sum(u[1][results_field]), sum(sorted(u[1][results_field], reverse=True)[:6]), u[1]['team'], u[1]['team_points'], u[1]['westerley_points'], 101 - max(u[1][results_field]), len(u[1][results_field]), sum(1 for x in u[1][results_field] if x == 100), sum(1 for x in u[1][results_field] if x == 99), sum(1 for x in u[1][results_field] if x == 98)])
         u[1][last_pos_field] = pos
 
 def write_westerley(users, fname='out/westerley_results.csv'):
@@ -268,9 +286,10 @@ def write_teams(team_points, fname='out/team_results.csv'):
     for pos, t in enumerate(team_points, start=1):
         csvwriter.writerow([pos, t[0], t[1]])
 
-def parse_event(html, westerley, race_no):
+def parse_event(html, westerley, ladies, race_no):
     data = lxml.etree.HTML(html)
     westerley_seen = set()
+    ladies_offset = None
     for result in data.xpath('/html/body/div/main/div/div/div[@id="results"]/table/tbody/tr'):
         row = {}
         postd, _trophytd, userdatatd, timetd, wkgtd, _rankchangetd = result.xpath('td')
@@ -321,10 +340,16 @@ def parse_event(html, westerley, race_no):
             row['westerley_pos'] = len(westerley_seen)
         else:
             row['westerley_pos'] = None
+        if row['userurl'] in ladies:
+            if ladies_offset is None:
+                ladies_offset = row['pos'] - 1
+            row['ladies_points'] = 101 - row['pos'] + ladies_offset
+        else:
+            row['ladies_points'] = None
         yield row
 
 def ingest_row(row, users, team_points):
-    users.setdefault(row['userurl'], {'name': row['name'], 'team_points': 0, 'westerley_points': 0, 'results': [], 'team': row['vr_teamname']})
+    users.setdefault(row['userurl'], {'name': row['name'], 'team_points': 0, 'westerley_points': 0, 'results': [], 'results_ladies': [], 'team': row['vr_teamname']})
     if row['pos']:
         user = users[row['userurl']]
         if user['team'] != row['vr_teamname'] and row['vr_teamname'] is not None:
@@ -333,6 +358,8 @@ def ingest_row(row, users, team_points):
             user['team'] = row['vr_teamname']
         race_points = max(1, 101 - row['pos'])
         user['results'].append(race_points)
+        if row['ladies_points'] is not None:
+            user['results_ladies'].append(row['ladies_points'])
         if row['team_qualifier']:
             team_points.setdefault(row['vr_teamname'], 0)
             team_points[row['vr_teamname']] += race_points
