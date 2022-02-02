@@ -1,0 +1,118 @@
+pos,userurl,name,rgt_teamname,vr_teamname,team_qualifier,westerley_pos,ladies_points,time_secs,delta_secs,wkg,country,time_human,delta_human
+1,/user/225601,Rasmus  Feldballe(m),eCKD(GP),,,,,1368.7,0.0,5.02,Danmark,22:48.700,00:00.000
+2,/user/95553,John Sammut (a),Pocomotion,POCOMOTION,True,,,1370.2,1.487,4.22,UK,22:50.200,00:01.487
+3,/user/126963,Miles Askew [ṀṚ],ṀṚ,MOON RIDERS 1,True,,,1371.1,2.429,4.6,,22:51.100,00:02.429
+4,/user/134948,Nick Greenhalgh [ЯƦ] c,яʀ,RASIO RACING,True,1,,1371.5,2.811,4.31,UK,22:51.500,00:02.811
+5,/user/17957,Tom Gakes,[D],,,,,1371.6,2.935,3.89,Netherlands,22:51.600,00:02.935
+6,/user/198726,Mario  Cavelius,,,,,,1371.8,3.067,4.01,,22:51.800,00:03.067
+7,/user/270710,Jack Samways[wvs],,WATFORD VELO SPORT RT,True,,,1371.8,3.105,4.47,,22:51.800,00:03.105
+8,/user/39166,Ned Bowen,[D],,,,,1371.9,3.252,4.29,USA,22:51.900,00:03.252
+9,/user/621,Jared Millar b,,,,,,1372.1,3.441,4.6,,22:52.100,00:03.441
+10,/user/79121,James Melville,,GLASGOW UNITED CC,True,,,1372.2,3.496,4.35,UK,22:52.200,00:03.496
+11,/user/195523,—- Gav ash tmc,ddrt,,,,,1372.2,3.504,4.39,,22:52.200,00:03.504
+12,/user/155757,Jan Linden poco,Pocomotion,POCOMOTION,True,,,1372.5,3.82,4.13,Netherlands,22:52.500,00:03.820
+13,/user/160071,Wouter Claes,ṀṚ,MOON RIDERS 1,True,,,1372.9,4.212,4.14,Belgium,22:52.900,00:04.212
+14,/user/197121,Chris Jones [ddrt],ddrt,,,,,1372.9,4.253,3.51,,22:52.900,00:04.253
+15,/user/132783,Mathias  Bergkvist,,,,,,1373.0,4.286,4.06,Sweden,22:53.000,00:04.286
+16,/user/256517,Roger Hughes poco,Pocomotion,,,,,1373.9,5.23,4.19,,22:53.900,00:05.230
+17,/user/188139,Per Soderberg ,OT,,,,,1376.3,7.604,3.74,,22:56.300,00:07.604
+18,/user/141761,Alasdair Mcalpine,,GLASGOW UNITED CC,True,,,1381.9,13.224,4.87,UK,23:01.900,00:13.224
+19,/user/143480,Mark Rowbottom яʀ,яʀ,RASIO RACING,True,,,1390.7,22.059,4.35,UK,23:10.700,00:22.059
+20,/user/175915,Kristen Ege poco,Pocomotion,,,,,1399.4,30.723,3.8,Danmark,23:19.400,00:30.723
+21,/user/134803,Steve Mayes (m),,,,,,1420.8,52.091,3.45,UK,23:40.800,00:52.091
+22,/user/185830,James Currie sdw b,SDW,SOUTHBOROUGH (SDW) BEES,True,,,1421.7,53.044,3.48,,23:41.700,00:53.044
+23,/user/274421,Louis Francis [wvs],,,,,,1421.9,53.254,3.86,,23:41.900,00:53.254
+24,/user/267104,Simon  Hall [wvs],,WATFORD VELO SPORT RT,True,,,1422.2,53.555,4.53,,23:42.200,00:53.555
+25,/user/171135,Tomasz Poniatowski [ṀṚ],ṀṚ,MOON RIDERS 1,False,,,1422.3,53.601,3.08,Poland,23:42.300,00:53.601
+26,/user/56133,Peter Austin otr c,OT,,,,,1422.5,53.833,4.03,UK,23:42.500,00:53.833
+27,/user/128814,Tim Cummins,,WESTERLEY ONE,True,2,,1422.8,54.095,4.21,UK,23:42.800,00:54.095
+28,/user/6051,Mitch Ide,,,,,,1422.8,54.103,4.62,,23:42.800,00:54.103
+29,/user/254894,A. Ussie king.  :-) 3r,3R-TLR,,,,,1422.9,54.252,3.9,,23:42.900,00:54.252
+30,/user/150787,Paul Hindson,,,,,,1423.1,54.465,3.79,,23:43.100,00:54.465
+31,/user/177199,Julian Fussell sdw,SDW,SOUTHBOROUGH (SDW) HORNETS,True,,,1423.8,55.132,3.99,UK,23:43.800,00:55.132
+32,/user/270702,Stuart Gillies tcc,,TWICKENHAM CC,True,,,1426.7,58.034,3.63,,23:46.700,00:58.034
+33,/user/126796,Simon Miller sdw,SDWasps,SOUTHBOROUGH (SDW) BEES,True,,,1426.8,58.068,3.67,UK,23:46.800,00:58.068
+34,/user/42607,Brian Vince [wvs],,WATFORD VELO SPORT RT,False,,,1428.5,59.791,4.11,,23:48.500,00:59.791
+35,/user/264752,Luc Van reeth c,,,,,,1428.6,59.958,4.07,,23:48.600,00:59.958
+36,/user/31157,Ben Lowe (tcc),,,,,,1428.7,59.981,3.7,,23:48.700,00:59.981
+37,/user/70138,Andrew Beale c,,WESTERLEY TWO,True,3,,1431.2,62.555,3.56,UK,23:51.200,01:02.555
+38,/user/21747,Matthew Feely,,,,,,1438.3,69.66499999999999,3.74,Eire,23:58.300,01:09.665
+39,/user/189298,Rob Miller (3r),3R,,,,,1441.2,72.557,3.68,USA,24:01.200,01:12.557
+40,/user/264656,Alberto Faustino,,,,,,1460.9,92.193,4.78,,24:20.900,01:32.193
+41,/user/6305,Mike Ade,OTR Osprey,,,,,1491.7,123.002,3.68,UK,24:51.700,02:03.002
+42,/user/79305,Carlos Cela,,,,,,1492.4,123.676,4.01,Espana,24:52.400,02:03.676
+43,/user/249688,Pat Herron,,,,,,1497.8,129.107,3.88,UK,24:57.800,02:09.107
+44,/user/96645,Marcin Szkudlarek [ṀṚ],ṀṚ,SATELITE RIDERS,True,,,1499.5,130.847,3.64,Poland,24:59.500,02:10.847
+45,/user/273772,Terrence Harest,,,,,,1499.5,130.856,3.71,,24:59.500,02:10.856
+46,/user/170063,Marco Verhoogt (b),,,,,,1499.7,131.015,3.78,Netherlands,24:59.700,02:11.015
+47,/user/243207,Ian Sudds ,,,,,,1501.2,132.494,3.6,,25:01.200,02:12.494
+48,/user/14162,Will Hutchins,WVRT,,,,,1501.6,132.903,3.65,,25:01.600,02:12.903
+49,/user/232488,Scott  Crichton ,,,,,,1508.6,139.867,3.22,Australia,25:08.600,02:19.867
+50,/user/182446,Xavier Talenton,,,,,,1528.9,160.242,3.14,,25:28.900,02:40.242
+51,/user/57107,Laan Ragnar(tcc),,,,,,1540.8,172.159,3.12,,25:40.800,02:52.159
+52,/user/94149,James Dicks,,,,,,1558.1,189.445,4.44,,25:58.100,03:09.445
+53,/user/186271,David Kent (d),,,,,,1560.1,191.425,3.3,,26:00.100,03:11.425
+54,/user/262464,Thomas  Berthold ,,,,,,1560.2,191.563,3.55,,26:00.200,03:11.563
+55,/user/165681,Judith Newton (w),,,,,,1560.8,192.14,3.79,,26:00.800,03:12.140
+56,/user/143668,Stu Thorn,,,,,,1561.0,192.328,3.38,,26:01.000,03:12.328
+57,/user/91958,Gt Thakkar,,WESTERLEY ONE,True,4,,1563.4,194.746,3.14,UK,26:03.400,03:14.746
+58,/user/55374,Andrew Goff,ṀṚ,SATELITE RIDERS,True,,,1569.9,201.222,3.72,,26:09.900,03:21.222
+59,/user/198978,Harry (arry) smits,,,,,,1582.1,213.388,4.05,,26:22.100,03:33.388
+60,/user/301698,Gail Rob (tcc),,,,,,1582.2,213.53,4.21,,26:22.200,03:33.530
+61,/user/159111,Witek Rzeszutek [ṀṚ],,,,,,1591.2,222.522,3.44,,26:31.200,03:42.522
+62,/user/86973,David wcc Buckley wcc,,WESTERLEY ONE,False,5,,1594.0,225.304,3.05,UK,26:34.000,03:45.304
+63,/user/295469,Jason Harding tcc,,,,,,1596.6,227.891,3.43,,26:36.600,03:47.891
+64,/user/288515,Pieter Ver eecke,,,,,,1641.2,272.565,3.11,,27:21.200,04:32.565
+65,/user/221770,Rafael Nunez,,,,,,1642.3,273.627,2.97,,27:22.300,04:33.627
+66,/user/266085,Lo scalatore Dell'etna,,,,,,1644.4,275.753,3.65,,27:24.400,04:35.753
+67,/user/123417,Mike Buckhurst,,,,,,1679.8,311.138,3.09,USA,27:59.800,05:11.138
+68,/user/269264,Bik(er)win Le blanc (b),,,,,,1684.0,315.26800000000003,2.91,,28:04.000,05:15.268
+69,/user/296820,Clint Heron,,,,,,1684.4,315.735,3.28,,28:04.400,05:15.735
+70,/user/202732,Kara Bonneau,,,,,,1685.5,316.786,3.21,,28:05.500,05:16.786
+71,/user/270667,Gri Pulga,,,,,100,1686.1,317.457,3.16,,28:06.100,05:17.457
+72,/user/255577,Wendy Wonderweels-otr,OTR-keas,,,,99,1686.4,317.712,3.23,,28:06.400,05:17.712
+73,/user/97222,Paulo Almeida,,,,,,1688.8,320.08299999999997,3.22,Portugal,28:08.800,05:20.083
+74,/user/101319,Martin Wilson,,,,,,1696.4,327.765,2.99,UK,28:16.400,05:27.765
+75,/user/132970,Lee Perry [art],,,,,,1700.0,331.301,2.98,,28:20.000,05:31.301
+76,/user/164846,Al Dekerma (m),,,,,,1701.5,332.849,2.83,,28:21.500,05:32.849
+77,/user/232622,Grant  Watson ,,,,,,1706.6,337.936,2.49,,28:26.600,05:37.936
+78,/user/288668,Robert Blackburn [tcc],,TWICKENHAM CC,True,,,1709.7,341.052,3.06,,28:29.700,05:41.052
+79,/user/278058,Claire  Miller (tcc),,TWICKENHAM CC LADIES,True,,92,1718.7,350.032,3.64,,28:38.700,05:50.032
+80,/user/288803,Robg Robg,,,,,,1739.6,370.923,3.01,,28:59.600,06:10.923
+81,/user/239903,Miguel Silva(o),,,,,,1848.5,479.837,2.52,,30:48.500,07:59.837
+82,/user/289203,Rick Van der laan,,,,,,1908.6,539.955,2.4,,31:48.600,08:59.955
+83,/user/77406,Pj Tcc,,,,,,1920.1,551.394,2.38,,32:00.100,09:11.394
+84,/user/43482,Coco Maisie,,,,,,1920.3,551.645,2.01,,32:00.300,09:11.645
+85,/user/66324,Gavin Grant tcc,,TWICKENHAM CC,False,,,1923.0,554.278,2.1,,32:03.000,09:14.278
+86,/user/95813,Lisa West tcc,,TWICKENHAM CC LADIES,True,,85,1923.5,554.817,2.13,,32:03.500,09:14.817
+87,/user/305101,Michael Grünwald,,,,,,1941.3,572.573,2.06,,32:21.300,09:32.573
+88,/user/298310,Ricardo Morais,,,,,,1964.6,595.879,2.27,,32:44.600,09:55.879
+89,/user/291095,Wright Jessica ,,,,,,2077.2,708.53,2.16,,34:37.200,11:48.530
+90,/user/3964,L.  rowland (tcc),,TWICKENHAM CC LADIES,False,,81,2207.2,838.502,1.75,,36:47.200,13:58.502
+91,/user/241536,Lynda Lynda v,OTR,,,,80,2424.7,1056.012,2.12,,40:24.700,17:36.012
+92,/user/306050,Richard Kilpin,,,,,,2549.3,1180.626,1.37,,42:29.300,19:40.626
+,/user/193726,Manuel  Morales,,,,,,,,,,,
+,,Borkovitz Borko,,,,,,,,,,,
+,,Miriam  Martin,,,,,,,,,,,
+,/user/219215,Kaustav Bhattacharya,,,,,,,,,,,
+,/user/15530,Craig Gregario,,,,,,,,,,,
+,/user/191330,Anders Jönsson [rgtswe],RGTSWE,,,,,,,,,,
+,/user/74342,Nic Stevenson,,,,6,,,,,UK,,
+,/user/256908,João Pinho (m),,,,,,,,,,,
+,/user/267097,Darryl Green - wvs,,WATFORD VELO SPORT RT,False,,,,,,,,
+,/user/267995,Aleksandar Garaca,,,,,,,,,,,
+,/user/283363,Mattias Lundqvist [rgtswe],RGTSWE,,,,,,,,,,
+,/user/235577,Ron Noors,,,,,,,,,,,
+,/user/18064,Francisco Zapata,,,,,,,,,,,
+,/user/304990,Luís Andrade,,,,,,,,,,,
+,/user/138802,David Thomas,,,,,,,,,UK,,
+,/user/272020,Mark Mcpartland,,,,,,,,,,,
+,/user/163334,Anthony Lee,,,,,,,,,,,
+,/user/200597,Asbjørn May,,,,,,,,,Danmark,,
+,/user/192296,Christophe Mathieu,,,,,,,,,,,
+,/user/221746,Tom Yates-ijaz,,WESTERLEY TWO,False,7,,,,,UK,,
+,/user/274579,Jonathan Frost [tcc],,TWICKENHAM CC,False,,,,,,,,
+,/user/292797,Christian Ehart,,,,,,,,,,,
+,,Steffen Furholm,,,,,,,,,,,
+,/user/302269,Rainer Flurschadentreter,,,,,,,,,,,
+,/user/7943,James Jones,,,,,,,,,,,
